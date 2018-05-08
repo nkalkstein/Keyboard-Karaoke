@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", function(){
     song.play()
     setTimeout(displayLyrics, 5600)
     strikeBox()
-
-   
   })
 
   function displayLyrics(){
@@ -18,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let duration = 0
 
     function displayLine(){
-      // this is where we check the text and minus a point for failed attempts
-    
       if(lyricStore[n]){
         const words = document.createElement('p')
 
@@ -29,23 +25,23 @@ document.addEventListener("DOMContentLoaded", function(){
           span.classList.add("span");
           span.innerHTML = lyricStore[n].content[i];
           words.appendChild(span);
+        }
 
+        // reset event listener
+        document.removeEventListener("keydown", typing, false);
+        tallyStrikes()
 
-         }
+        lyricContainer.innerHTML = words.innerHTML
+        document.addEventListener('keydown', typing, false)
+        duration = lyricStore[n].duration * 1000
+        n++
+        setTimeout(displayLine, duration)
 
-         document.removeEventListener("keydown", typing, false);
-         tallyStrikes()
-         lyricContainer.innerHTML = words.innerHTML
-         document.addEventListener('keydown', typing, false)
-         duration = lyricStore[n].duration * 1000
-         n++
-         setTimeout(displayLine, duration)
-         
       }
     }
 
     displayLine()
-  
+
 
   }
 
@@ -65,9 +61,30 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   }
 
+  function strikeBox(){
+    strikesDiv = document.createElement("DIV")
+    strikesDiv.id = "strikes"
+    strikesDiv.innerHTML = `<h3>Ten Strikes and You are Out</h3>
+                              <p id= strikesP> 0  </p>`
+    document.querySelector("BODY").append(strikesDiv)
+  }
+
+
+  function tallyStrikes(){
+    const lyricContainer = document.getElementById('lyric-container')
+    const array = lyricContainer.querySelectorAll('span')
+    const length = lyricContainer.querySelectorAll('span').length - 1
+    const last = array[length]
+
+    if (last){
+      if (last.className !== "bg"){
+          document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
+      }
+    }
+  }
+
   Song.getSongs()
   Lyric.getLyrics()
-  
 
 })
 
@@ -75,32 +92,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-function strikeBox(){
-      strikesDiv = document.createElement("DIV")
-      strikesDiv.id = "strikes"
-      strikesDiv.innerHTML = `<h3>Ten Strikes and You are Out</h3>
-                                <p id= strikesP> 0  </p>`                          
-     document.querySelector("BODY").append(strikesDiv)
-    }
-
-
-function tallyStrikes(){
-         let lyricContainer = document.getElementById('lyric-container')
-         let array = lyricContainer.querySelectorAll('span')
-         let length = lyricContainer.querySelectorAll('span').length - 1
-         console.log(length)
-         let last = array[length]
-         console.log(last)
-          if (last){
-            if (last.className !== "bg"){
-                document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
-          }
-          }
-
-        
-          }
-        
-      
 // function strikes(){
 //       let strikes= 0;
 //       strikesDiv = document.createElement("DIV")
