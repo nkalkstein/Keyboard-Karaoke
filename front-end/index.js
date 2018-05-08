@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
   startSong.addEventListener('click', function(){
     gameOver = false
     startSong.innerText = ''
+    document.addEventListener('keydown', typing, false)
     song.play()
     setTimeout(displayLyrics, 5600)
     strikeBox()
@@ -29,12 +30,8 @@ document.addEventListener("DOMContentLoaded", function(){
           words.appendChild(span);
         }
 
-        // reset event listener
-        document.removeEventListener("keydown", typing, false);
         tallyStrikes()
-
         lyricContainer.innerHTML = words.innerHTML
-        document.addEventListener('keydown', typing, false)
         duration = lyricStore[n].duration * 1000
         n++
         setTimeout(displayLine, duration)
@@ -81,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function(){
       if (last.className !== "bg"){
         document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
         if (parseInt(document.getElementById("strikesP").innerText)  === 10){
+          document.removeEventListener('keydown', typing, false)
           document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
           gameOver = true
           song.pause()
