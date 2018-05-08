@@ -45,16 +45,13 @@ document.addEventListener("DOMContentLoaded", function(){
     const spans = document.querySelectorAll('.span');
     const typed = String.fromCharCode(event.which);
 
-    for (let i = 0; i < spans.length; i++) {
-      if (spans[i].innerText.toLowerCase() === typed.toLowerCase()) { // if typed letter is the one from the word
+    for (let i = 0; i < spans.length; ++i) {
         if (spans[i].classList.contains("bg")) { // if it already has class with the bg color then check the next one
           continue;
-        } else if (spans[i].classList.contains("bg") === false && spans[i-1] === undefined || spans[i-1].classList.contains("bg") !== false ) {
-          // if it doesnt have class, if it is not first letter or if the letter before it doesnt have class
-          // (this is done to avoid marking the letters who are not in order for being checked,
-          // for example if you have two "A"s so to avoid marking both of them)
-          spans[i].classList.add("bg");
-          break;
+        } else if (!spans[i].classList.contains("bg") && !spans[i-1] || spans[i-1].classList.contains("bg")) {
+
+          if (spans[i].innerHTML.toLowerCase() === typed.toLowerCase()) {
+            spans[i].classList.add("bg");
         }
       }
     }
@@ -65,10 +62,6 @@ document.addEventListener("DOMContentLoaded", function(){
   strikes()
 
 })
-
-
-
-
 
 function strikes(){
       let strikes= 0;
@@ -86,4 +79,4 @@ function strikes(){
         alert("Strike 10! YOU LOSE!  (You clearly don't know good music...)");
       }
     }
-        
+  }
