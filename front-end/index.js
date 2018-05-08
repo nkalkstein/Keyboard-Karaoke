@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   const startSong = document.getElementById('start-song')
   const lyricContainer = document.getElementById('lyric-container')
-  const test = [{ content: 'one'}, { content: 'two'}, { content: 'three'}]
-
+  
   startSong.addEventListener('click', function(){
     startSong.innerText = ''
     displayLyrics();
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function displayLine(){
       // this is where we check the text and minus a point for failed attempts
-      
+
       if(lyricStore[n]){
         lyricContainer.innerText = lyricStore[n].content
         duration = lyricStore[n].duration * 1000
