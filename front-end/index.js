@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const startSong = document.getElementById('start-song')
   const lyricContainer = document.getElementById('lyric-container')
   const song = document.getElementById('audio')
+  const strikesDiv = document.getElementById('strikes')
   let gameOver = false
 
   startSong.addEventListener('click', function(){
@@ -41,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     displayLine()
 
-
   }
 
   function typing(event) {
@@ -61,11 +61,8 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function strikeBox(){
-    strikesDiv = document.createElement("DIV")
-    strikesDiv.id = "strikes"
     strikesDiv.innerHTML = `<h3>Ten Strikes and You are Out</h3>
                               <p id= strikesP> 0  </p>`
-    document.querySelector("BODY").append(strikesDiv)
   }
 
 
