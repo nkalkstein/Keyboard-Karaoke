@@ -1,7 +1,18 @@
+body {
+  text-align: center;
+}
+
 audio {
    display: none;
 }
 
 .bg {
 	background-color: #04AF71;
+}
+
+#lyric-container {
+  max-width: 720px;
+  max-height: 720px;
+  font-family: 'Trebuchet MS';
+  font-size: 40px;
 }
