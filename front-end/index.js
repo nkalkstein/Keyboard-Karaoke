@@ -16,10 +16,11 @@ document.addEventListener("DOMContentLoaded", function(){
   function displayLyrics(){
     let n = 0
     let duration = 0
+    
 
     function displayLine(){
       // this is where we check the text and minus a point for failed attempts
-    
+  
       if(lyricStore[n]){
         const words = document.createElement('p')
 
@@ -92,13 +93,19 @@ function tallyStrikes(){
          let last = array[length]
          console.log(last)
           if (last){
-            if (last.className !== "bg"){
+            if (parseInt(document.getElementById("strikesP").innerText)  === 10){
+            alert("Strike 10! YOU LOSE!  (You clearly don't know good music...)");
+            displayLyrics()
+          }
+            else if (last.className !== "bg"){
                 document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
           }
           }
+  }
 
-        
-          }
+
+          
+
         
       
 // function strikes(){
