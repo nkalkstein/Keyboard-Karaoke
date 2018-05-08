@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
   const startSong = document.getElementById('start-song')
   const lyricContainer = document.getElementById('lyric-container')
-  
+  const song = document.getElementById('audio')
+
   startSong.addEventListener('click', function(){
     startSong.innerText = ''
-    displayLyrics();
+    song.play()
+    setTimeout(displayLyrics, 5600)
   })
 
   function displayLyrics(){
