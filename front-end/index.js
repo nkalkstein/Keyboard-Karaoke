@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", function(){
   const startSong = document.getElementById('start-song')
   const lyricContainer = document.getElementById('lyric-container')
   const song = document.getElementById('audio')
+  let gameOver = false
 
   startSong.addEventListener('click', function(){
+    gameOver = false
     startSong.innerText = ''
     song.play()
     setTimeout(displayLyrics, 5600)
@@ -15,9 +17,8 @@ document.addEventListener("DOMContentLoaded", function(){
     let n = 0
     let duration = 0
 
-
     function displayLine(){
-      if(lyricStore[n]){
+      if(lyricStore[n] && !gameOver){
         const words = document.createElement('p')
 
         // build the words with span elements around the letters
@@ -72,36 +73,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   function tallyStrikes(){
-    const lyricContainer = document.getElementById('lyric-container')
-    const array = lyricContainer.querySelectorAll('span')
-    const length = lyricContainer.querySelectorAll('span').length - 1
-    const last = array[length]
-
-    if (last){
-      if (last.className !== "bg"){
-          document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
-      }
-    }
-  }
-
-  function strikeBox(){
-    strikesDiv = document.createElement("DIV")
-    strikesDiv.id = "strikes"
-    strikesDiv.innerHTML = `<h3>Ten Strikes and You are Out</h3>
-                              <p id= strikesP> 0  </p>`
-    document.querySelector("BODY").append(strikesDiv)
-  }
-
-
-  function tallyStrikes(){
     let lyricContainer = document.getElementById('lyric-container')
     let array = lyricContainer.querySelectorAll('span')
     let length = lyricContainer.querySelectorAll('span').length - 1
     let last = array[length]
     if (last){
       if (parseInt(document.getElementById("strikesP").innerText)  === 10){
-        alert("Strike 10! YOU LOSE!  (You clearly don't know good music...)");
-        displayLyrics()
+        document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
+        gameOver = true
+        song.pause()
       }
       else if (last.className !== "bg"){
         document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
