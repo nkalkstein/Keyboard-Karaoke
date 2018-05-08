@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let n = 0
     let duration = 0
 
+
     function displayLine(){
       if(lyricStore[n]){
         const words = document.createElement('p')
@@ -83,29 +84,33 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   }
 
+  function strikeBox(){
+    strikesDiv = document.createElement("DIV")
+    strikesDiv.id = "strikes"
+    strikesDiv.innerHTML = `<h3>Ten Strikes and You are Out</h3>
+                              <p id= strikesP> 0  </p>`
+    document.querySelector("BODY").append(strikesDiv)
+  }
+
+
+  function tallyStrikes(){
+    let lyricContainer = document.getElementById('lyric-container')
+    let array = lyricContainer.querySelectorAll('span')
+    let length = lyricContainer.querySelectorAll('span').length - 1
+    let last = array[length]
+    if (last){
+      if (parseInt(document.getElementById("strikesP").innerText)  === 10){
+        alert("Strike 10! YOU LOSE!  (You clearly don't know good music...)");
+        displayLyrics()
+      }
+      else if (last.className !== "bg"){
+        document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
+      }
+    }
+  }
+
+
   Song.getSongs()
   Lyric.getLyrics()
 
 })
-
-
-
-
-
-// function strikes(){
-//       let strikes= 0;
-//       strikesDiv = document.createElement("DIV")
-//       strikesDiv.id = "strikes"
-//       strikesDiv.innerHTML = `<h3>Ten Strikes and You are Out</h3>
-//                                 <p> ${strikes} </p>`
-//     //   if (((document.getElementById('lyric-container').innerText)[(document.getElementById('lyric-container').innerText).length].className === "bg"){
-//     //             strikes++
-//     // }
-//     gameOver(strikes)
-
-//     function gameOver(strikes){
-//       if (strikes === 10){
-//         alert("Strike 10! YOU LOSE!  (You clearly don't know good music...)");
-//       }
-//     }
-//   }
