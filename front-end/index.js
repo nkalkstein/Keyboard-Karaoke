@@ -78,13 +78,13 @@ document.addEventListener("DOMContentLoaded", function(){
     let length = lyricContainer.querySelectorAll('span').length - 1
     let last = array[length]
     if (last){
-      if (parseInt(document.getElementById("strikesP").innerText)  === 10){
-        document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
-        gameOver = true
-        song.pause()
-      }
-      else if (last.className !== "bg"){
+      if (last.className !== "bg"){
         document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
+        if (parseInt(document.getElementById("strikesP").innerText)  === 10){
+          document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
+          gameOver = true
+          song.pause()
+        }
       }
     }
   }
