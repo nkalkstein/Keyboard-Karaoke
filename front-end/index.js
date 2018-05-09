@@ -1,48 +1,79 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   const startSong = document.getElementById('start-song')
+  const chooseSongDiv = document.getElementById('choose-song')
   const lyricContainer = document.getElementById('lyric-container')
   const song = document.getElementById('audio')
   const video = document.getElementById('video')
   const strikesDiv = document.getElementById('strikes')
   let gameOver = false
+  let videoSrc
+  let songSrc
+  let lyrics
+  let delay
 
-  startSong.addEventListener('click', startGame)
+  chooseSongDiv.addEventListener('click', chooseSong)
+
+  function chooseSong(event){
+    if(!event.target.id){
+      return
+    }
+
+    if(event.target.id === 'choose-roar'){
+      videoSrc = 'video/Roar.mp4'
+      songSrc = 'mp3s/Roar.mp3'
+      lyrics = lyricStore.filter((object) => object.song_id === 1)
+      delay = 19500
+    }
+    else if(event.target.id === 'choose-everlong'){
+      videoSrc = 'video/everlong.mp4'
+      songSrc = 'mp3s/everlong.mp3'
+      lyrics = lyricStore.filter((object) => object.song_id === 4)
+      delay = 34000
+    }
+
+    chooseSongDiv.classList.add('hidden')
+    startSong.classList.remove('hidden')
+    startSong.addEventListener('click', startGame)
+  }
 
   function startGame(){
     strikeBox()
     startSong.innerText = ''
     lyricContainer.innerHTML = ''
+    video.src = videoSrc
+    song.src = songSrc
+
+
     video.classList.remove('hidden')
     document.addEventListener('keydown', typing, false)
     song.currentTime = 0;
     video.currentTime = 0;
     song.play()
     video.play()
-    setTimeout(displayLyrics, 19500)
+    setTimeout(displayLyrics, delay)
   }
 
   function displayLyrics(){
-    const roarLyrics = lyricStore.filter((object) => object.song_id === 1)
     let n = 0
     let duration = 0
     gameOver = false
 
     function displayLine(){
-      if(roarLyrics[n] && !gameOver){
+      if(lyrics[n] && !gameOver){
         const words = document.createElement('p')
 
         // build the words with span elements around the letters
-        for (let i = 0; i < roarLyrics[n].content.length; i++) {
+        for (let i = 0; i < lyrics[n].content.length; i++) {
           const span = document.createElement("span");
           span.classList.add("span");
-          span.innerHTML = roarLyrics[n].content[i];
+          span.innerHTML = lyrics[n].content[i];
           words.appendChild(span);
         }
 
         tallyStrikes()
         lyricContainer.innerHTML = words.innerHTML
-        duration = roarLyrics[n].duration * 1000
+        duration = lyrics[n].duration * 1000
         n++
         setTimeout(displayLine, duration)
 
@@ -89,7 +120,8 @@ document.addEventListener("DOMContentLoaded", function(){
           song.pause()
           video.pause()
           document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
-          startSong.innerText = 'Replay?'
+          chooseSongDiv.classList.remove('hidden')
+          chooseSongDiv.addEventListener('click', chooseSong)
         }
       }
     }

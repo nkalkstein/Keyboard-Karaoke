@@ -6,12 +6,18 @@
     <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <h2 id="start-song">Click Here To Play Song</h2>
+    <div id="choose-song">
+      <h1>Welcome to Typing Karaoke!</h1>
+      <h2><span id="choose-roar">Katy Perry - Roar</span></h2>
+      <h2><span id="choose-everlong">Foo Fighters - Everlong</span></h2>
+    </div>
+
+    <h2 id="start-song" class="hidden">Click Here To Play Song</h2>
     <br/><br/>
 
     <div id='video-container'>
       <video class="hidden" preload="preload" id="video">
-        <source src="video/Roar.mp4" type="video/mp4"></source>
+        <source type="video/mp4"></source>
       </video>
       <div id="lyric-container">
       </div>
@@ -19,7 +25,7 @@
 
     <div id="strikes"></div>
 
-    <audio id="audio" preload="auto" src="mp3s/Roar.mp3">
+    <audio id="audio" preload="auto">
 
     <script src="song.js"></script>
     <script src="lyric.js"></script>

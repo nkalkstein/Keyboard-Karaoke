@@ -15,6 +15,10 @@ video {
   z-index: -1;
 }
 
+h2 span:hover {
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
@@ -40,8 +44,8 @@ video {
 }
 
 #video-container {
-  width: 711px;
-  height: 400px;
+  width: 640px;
+  height: 480px;
   margin: 0 auto;
   top: 0; bottom: 0;
   overflow: hidden;
