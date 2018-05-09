@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const song = document.getElementById('audio')
   const video = document.getElementById('video')
   const strikesDiv = document.getElementById('strikes')
+  const scoreDiv = document.getElementById("score-div")
   let gameOver = false
   let videoSrc
   let songSrc
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function startGame(){
     strikeBox()
+    scoreBox()
     startSong.innerText = ''
     lyricContainer.innerHTML = ''
     video.src = videoSrc
@@ -95,14 +97,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
           if (spans[i].innerHTML.toLowerCase() === typed.toLowerCase()) {
             spans[i].classList.add("bg");
+            tallyScore()
         }
       }
     }
   }
 
   function strikeBox(){
-    strikesDiv.innerHTML = `<h3>Ten Strikes and You are Out</h3>
-                              <p id= strikesP> 0  </p>`
+    strikesDiv.innerHTML = `<h3>Ten Strikes and You're Out</h3>
+                            <p> Strikes:  </p>
+                            <p id= strikesP> 0  </p>`
   }
 
 
@@ -126,6 +130,21 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     }
   }
+
+   function scoreBox(){
+      score = 0
+      scoreDiv.innerHTML =`<p> Your score: </p>
+      <p id= "score" >  ${score} </p>
+      <p> High Score: </p>
+      <p id="highScore">  </p>`
+   }
+
+   function tallyScore(){
+      scoreArea = document.getElementById("score")
+      scoreArea.innerText = parseInt(scoreArea.innerText) + 1
+      // if (parseInt(`${score}`) > parseInt(`${highScore}`)){
+        Song.sendScore()
+      }
 })
 
 Song.getSongs()

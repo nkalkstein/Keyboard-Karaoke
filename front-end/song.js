@@ -25,4 +25,19 @@ class Song {
       })
     })
   }
+
+
+
+  static sendScore(score){
+    fetch(`http://localhost:3000/api/v1/songs/1`, {
+    method: 'PATCH',
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      score: data
+    })
+  })
+}
 }
