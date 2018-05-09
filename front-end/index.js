@@ -1,59 +1,139 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-  const startSong = document.getElementById('start-song')
+  const headerDiv = document.getElementById('header')
   const chooseSongDiv = document.getElementById('choose-song')
   const lyricContainer = document.getElementById('lyric-container')
   const song = document.getElementById('audio')
   const video = document.getElementById('video')
   const strikesDiv = document.getElementById('strikes')
   const scoreDiv = document.getElementById("score-div")
+  const pressStart = document.getElementById('press-start')
+  const chooseSongH2 = document.getElementById('choose-song-h2')
+  const roarH2 = document.getElementById('choose-roar')
+  const everlongH2 = document.getElementById('choose-everlong')
+  const wonderfulWorldH2 = document.getElementById('choose-wonderful-world')
+
+  let counter = -1
   let gameOver = false
   let videoSrc
   let songSrc
   let lyrics
   let delay
 
-  chooseSongDiv.addEventListener('click', chooseSong)
+  document.addEventListener('keydown', songMenu)
 
-  function chooseSong(event){
-    if(!event.target.id){
-      return
+  function songMenu(event){
+    if(event.which === 13){
+      document.removeEventListener('keydown', songMenu)
+      pressStart.classList.add('hidden')
+      chooseSongDiv.classList.remove('hidden')
+      document.addEventListener('keydown', menuSelect)
     }
+  }
 
-    if(event.target.id === 'choose-roar'){
+  function menuSelect(event){
+    const array = [wonderfulWorldH2, everlongH2, roarH2]
+    const mp3Src = ['mp3s/what-a-wonderful-world.mp3', 'mp3s/everlong.mp3', 'mp3s/Roar.mp3']
+    const currentTimeArr = [6, 34, 66]
+
+    // if user presses down
+    if(event.which === 40){
+      if(counter > 1){
+        return
+      }
+      else if(counter === -1){
+        counter += 1
+        array[counter].classList.add('bg')
+        song.src = mp3Src[counter]
+        song.currentTime = currentTimeArr[counter];
+        song.play()
+      }
+      else {
+        array[counter].classList.remove('bg')
+        song.pause()
+        counter += 1
+
+        array[counter].classList.add('bg')
+        song.src = mp3Src[counter]
+        song.currentTime = currentTimeArr[counter];
+        song.play()
+      }
+    }
+    // if user presses up
+    else if(event.which === 38){
+      if(counter < 1){
+        return
+      }
+      else {
+      array[counter].classList.remove('bg')
+      song.pause()
+      counter -= 1
+
+      array[counter].classList.add('bg')
+      song.src = mp3Src[counter]
+      song.currentTime = currentTimeArr[counter];
+      song.play()
+      }
+    }
+    else if(event.which === 13){
+      if(!array[counter]){
+        return
+      }
+
+      song.pause()
+      array[counter].classList.remove('bg')
+      document.removeEventListener('keydown', menuSelect)
+      chooseSong(array[counter].id)
+    }
+  }
+
+  function chooseSong(id){
+    if(id === 'choose-roar'){
       videoSrc = 'video/Roar.mp4'
       songSrc = 'mp3s/Roar.mp3'
       lyrics = lyricStore.filter((object) => object.song_id === 1)
       delay = 19500
     }
-    else if(event.target.id === 'choose-everlong'){
+    else if(id === 'choose-everlong'){
       videoSrc = 'video/everlong.mp4'
       songSrc = 'mp3s/everlong.mp3'
       lyrics = lyricStore.filter((object) => object.song_id === 4)
       delay = 34000
     }
+    else if(id === 'choose-wonderful-world'){
+      videoSrc = 'video/what-a-wonderful-world.mp4'
+      songSrc = 'mp3s/what-a-wonderful-world.mp3'
+      lyrics = lyricStore.filter((object) => object.song_id === 2)
+      delay = 6020
+    }
 
     chooseSongDiv.classList.add('hidden')
-    startSong.classList.remove('hidden')
-    startSong.addEventListener('click', startGame)
+    pressStart.innerHTML = "<h2>Get Ready! <br/> Press Enter To Play Song</h2>"
+    pressStart.classList.remove('hidden')
+    document.addEventListener('keydown', startGame)
   }
 
-  function startGame(){
-    strikeBox()
-    scoreBox()
-    startSong.innerText = ''
-    lyricContainer.innerHTML = ''
-    video.src = videoSrc
-    song.src = songSrc
+  function startGame(event){
+    if(event.which === 13){
+      document.removeEventListener('keydown', startGame)
+      strikeBox()
+      scoreBox()
+      header.classList.add('hidden')
+      chooseSongDiv.classList.add('hidden')
+      pressStart.classList.add('hidden')
+      lyricContainer.innerHTML = ''
+      video.src = videoSrc
+      song.src = songSrc
 
 
-    video.classList.remove('hidden')
-    document.addEventListener('keydown', typing, false)
-    song.currentTime = 0;
-    video.currentTime = 0;
-    song.play()
-    video.play()
-    setTimeout(displayLyrics, delay)
+      video.classList.remove('hidden')
+      document.addEventListener('keydown', typing, false)
+      song.currentTime = 0;
+      video.currentTime = 0;
+      song.play()
+      video.play()
+      setTimeout(displayLyrics, delay)
+    }
   }
 
   function displayLyrics(){
@@ -125,7 +205,10 @@ document.addEventListener("DOMContentLoaded", function(){
           video.pause()
           document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
           chooseSongDiv.classList.remove('hidden')
-          chooseSongDiv.addEventListener('click', chooseSong)
+
+          // this counter is for the song select menu
+          counter = -1
+          document.addEventListener('keydown', menuSelect)
         }
       }
     }

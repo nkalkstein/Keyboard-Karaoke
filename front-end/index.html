@@ -6,20 +6,22 @@
     <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <div id="choose-song">
+    <div id="header">
       <h1>Welcome to Typing Karaoke!</h1>
-      <h2><span id="choose-everlong">Foo Fighters - Everlong (Normal)</span></h2>
-      <h2><span id="choose-roar">Katy Perry - Roar (Difficult)</span></h2>
     </div>
-
-    <h2 id="start-song" class="hidden">Click Here To Play Song</h2>
-    <br/><br/>
 
     <div id='video-container'>
       <video class="hidden" preload="preload" id="video">
         <source type="video/mp4"></source>
       </video>
       <div id="lyric-container">
+      </div>
+      <div id="press-start"><h2>Press Enter To Begin</h2></div>
+      <div class="hidden" id="choose-song">
+        <h2 id="choose-song-h2">Choose a Song:</h2>
+        <h2><span id="choose-wonderful-world">Louis Armstrong - What A Wonderful World (Easy)</span></h2>
+        <h2><span id="choose-everlong">Foo Fighters - Everlong (Normal)</span></h2>
+        <h2><span id="choose-roar">Katy Perry - Roar (Difficult)</span></h2>
       </div>
     </div>
 
