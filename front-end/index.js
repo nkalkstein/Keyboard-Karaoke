@@ -115,6 +115,9 @@ document.addEventListener("DOMContentLoaded", function(){
       videoSrc = 'video/what-a-wonderful-world.mp4'
       songSrc = 'mp3s/what-a-wonderful-world.mp3'
       lyrics = lyricStore.filter((object) => object.song_id === 2)
+      thisSong = songStore.find((object) => object.id === 2)
+      thisSongId = thisSong.id
+      highScore = thisSong.score
       delay = 6020
     }
 
