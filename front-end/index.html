@@ -8,12 +8,18 @@
   <body>
     <h2 id="start-song">Click Here To Play Song</h2>
     <br/><br/>
-    <div id="lyric-container">
+
+    <div id='video-container'>
+      <video class="hidden" preload="preload" id="video">
+        <source src="video/Roar.mp4" type="video/mp4"></source>
+      </video>
+      <div id="lyric-container">
+      </div>
     </div>
 
     <div id="strikes"></div>
 
-    <audio id="audio" preload="auto" src="mp3s/roar.mp3">
+    <audio id="audio" preload="auto" src="mp3s/Roar.mp3">
 
     <script src="song.js"></script>
     <script src="lyric.js"></script>

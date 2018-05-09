@@ -3,21 +3,29 @@ document.addEventListener("DOMContentLoaded", function(){
   const startSong = document.getElementById('start-song')
   const lyricContainer = document.getElementById('lyric-container')
   const song = document.getElementById('audio')
+  const video = document.getElementById('video')
   const strikesDiv = document.getElementById('strikes')
   let gameOver = false
 
-  startSong.addEventListener('click', function(){
-    gameOver = false
-    startSong.innerText = ''
-    document.addEventListener('keydown', typing, false)
-    song.play()
-    setTimeout(displayLyrics, 5600)
+  startSong.addEventListener('click', startGame)
+
+  function startGame(){
     strikeBox()
-  })
+    startSong.innerText = ''
+    lyricContainer.innerHTML = ''
+    video.classList.remove('hidden')
+    document.addEventListener('keydown', typing, false)
+    song.currentTime = 0;
+    video.currentTime = 0;
+    song.play()
+    video.play()
+    setTimeout(displayLyrics, 19500)
+  }
 
   function displayLyrics(){
     let n = 0
     let duration = 0
+    gameOver = false
 
     function displayLine(){
       if(lyricStore[n] && !gameOver){
@@ -72,13 +80,15 @@ document.addEventListener("DOMContentLoaded", function(){
     let length = lyricContainer.querySelectorAll('span').length - 1
     let last = array[length]
     if (last){
-      if (last.className !== "bg"){
+      if (!last.classList.contains("bg")){
         document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
         if (parseInt(document.getElementById("strikesP").innerText)  === 10){
           document.removeEventListener('keydown', typing, false)
-          document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
           gameOver = true
           song.pause()
+          video.pause()
+          document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
+          startSong.innerText = 'Replay?'
         }
       }
     }
