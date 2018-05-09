@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function(){
   let strikes
   let gameOver = false
   let thisSong
-  // let thisSongId
   let lyrics
   let delay
 
@@ -108,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function(){
       song.src = 'mp3s/everlong.mp3'
       lyrics = lyricStore.filter((object) => object.song_id === 4)
       thisSong = songStore.find((object) => object.id === 4)
-      // thisSongId = thisSong.id
       delay = 34000
     }
     else if(id === 'choose-wonderful-world'){
@@ -242,7 +240,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function finalScore(){
       if (gameOver === true && currentScore > thisSong.score){
-        // Song.sendScore(`${thisSong.id}`, `${currentScore}`)
         thisSong.score = currentScore
         thisSong.sendScore()
         renderHighScore()
