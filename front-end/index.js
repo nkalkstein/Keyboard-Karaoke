@@ -12,16 +12,18 @@ document.addEventListener("DOMContentLoaded", function(){
   const roarH2 = document.getElementById('choose-roar')
   const everlongH2 = document.getElementById('choose-everlong')
   const wonderfulWorldH2 = document.getElementById('choose-wonderful-world')
+  const scoreBox = document.getElementById('score-div')
+  const scoreArea = document.getElementById("score")
+  const highScoreArea = document.getElementById("high-score")
+  const strikeBox = document.getElementById('strikes')
+  const strikesCount = document.getElementById("strikesP")
 
   let counter = -1
-  let currentScore = 0
-  let strikes = 0
+  let currentScore
+  let strikes
   let gameOver = false
   let thisSong
-  let thisSongId
-  let highScore
-  let videoSrc
-  let songSrc
+  // let thisSongId
   let lyrics
   let delay
 
@@ -94,27 +96,26 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function chooseSong(id){
     if(id === 'choose-roar'){
-      videoSrc = 'video/Roar.mp4'
-      songSrc = 'mp3s/Roar.mp3'
+      video.src = 'video/Roar.mp4'
+      song.src = 'mp3s/Roar.mp3'
       lyrics = lyricStore.filter((object) => object.song_id === 1)
       thisSong = songStore.find((object) => object.id === 1)
-      thisSongId = thisSong.id
-      highScore = thisSong.score
       delay = 19500
+
     }
     else if(id === 'choose-everlong'){
-      videoSrc = 'video/everlong.mp4'
-      songSrc = 'mp3s/everlong.mp3'
+      video.src = 'video/everlong.mp4'
+      song.src = 'mp3s/everlong.mp3'
       lyrics = lyricStore.filter((object) => object.song_id === 4)
       thisSong = songStore.find((object) => object.id === 4)
-      thisSongId = thisSong.id
-      highScore = thisSong.score
+      // thisSongId = thisSong.id
       delay = 34000
     }
     else if(id === 'choose-wonderful-world'){
-      videoSrc = 'video/what-a-wonderful-world.mp4'
-      songSrc = 'mp3s/what-a-wonderful-world.mp3'
+      video.src = 'video/what-a-wonderful-world.mp4'
+      song.src = 'mp3s/what-a-wonderful-world.mp3'
       lyrics = lyricStore.filter((object) => object.song_id === 2)
+      thisSong = songStore.find((object) => object.id === 2)
       delay = 6020
     }
 
@@ -127,17 +128,21 @@ document.addEventListener("DOMContentLoaded", function(){
   function startGame(event){
     if(event.which === 13){
       document.removeEventListener('keydown', startGame)
-      strikeBox()
-      scoreBox()
       header.classList.add('hidden')
       chooseSongDiv.classList.add('hidden')
       pressStart.classList.add('hidden')
       lyricContainer.innerHTML = ''
-      video.src = videoSrc
-      song.src = songSrc
 
+      strikes = 0
+      currentScore = 0
+      renderStrikes()
+      renderScore()
+      renderHighScore()
+      strikeBox.classList.remove('hidden')
+      scoreBox.classList.remove('hidden')
 
       video.classList.remove('hidden')
+      video.addEventListener('ended', finishGame, { once: true })
       document.addEventListener('keydown', typing, false)
       song.currentTime = 0;
       video.currentTime = 0;
@@ -194,15 +199,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   }
 
-  function strikeBox(){
-    strikesDiv.innerHTML = `<h3>Ten Strikes and You're Out</h3>
-                            <p> Strikes:  </p>
-                            <p id= strikesP>  ${strikes} </p>`
-  }
-
-
   function tallyStrikes(){
-    let lyricContainer = document.getElementById('lyric-container')
     let array = lyricContainer.querySelectorAll('span')
     let length = lyricContainer.querySelectorAll('span').length - 1
     let last = array[length]
@@ -210,13 +207,13 @@ document.addEventListener("DOMContentLoaded", function(){
       if (!last.classList.contains("bg")){
         strikes +=1
         renderStrikes()
-        if (parseInt(document.getElementById("strikesP").innerText)  === 10){
+        if (strikes === 10){
           document.removeEventListener('keydown', typing, false)
           gameOver = true
           finalScore()
           song.pause()
           video.pause()
-          document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
+          strikesCount.innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
           chooseSongDiv.classList.remove('hidden')
 
           // this counter is for the song select menu
@@ -228,42 +225,44 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function renderStrikes(){
-    document.getElementById("strikesP").innerText = `${strikes}`
+    strikesCount.innerText = `${strikes}`
 
 
   }
 
-   function scoreBox(){
-      scoreDiv.innerHTML =`<p> Your score: </p>
-      <p id= "score" >  ${currentScore} </p>
-      <p> High Score: </p>
-      <p id="high-score"> ${highScore} </p>`
-   }
-
    function tallyScore(){
-      scoreArea = document.getElementById("score")
       currentScore += 1
       renderScore()
    }
 
    function renderScore(){
-      document.getElementById("score").innerText = `${currentScore}`
+      scoreArea.innerText = `${currentScore}`
 
    }
 
   function finalScore(){
-    console.log("currentScore")
-      if (gameOver === true && (`${currentScore}` > `${highScore}`)){
-        Song.sendScore(`${thisSongId}`, `${currentScore}`)
-        highScore = `${currentScore}`
+      if (gameOver === true && currentScore > thisSong.score){
+        // Song.sendScore(`${thisSong.id}`, `${currentScore}`)
+        thisSong.score = currentScore
+        thisSong.sendScore()
         renderHighScore()
       }
     }
 
-
   function renderHighScore(){
-    document.getElementById("high-score").innerText = `${highScore}`
+    highScoreArea.innerText = `${thisSong.score}`
   }
+
+  function finishGame(){
+    gameOver = true
+    finalScore()
+    chooseSongDiv.classList.remove('hidden')
+
+    // this counter is for the song select menu
+    counter = -1
+    document.addEventListener('keydown', menuSelect)
+  }
+
 })
 
 Song.getSongs()

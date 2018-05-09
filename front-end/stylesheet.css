@@ -15,10 +15,6 @@ video {
   z-index: -1;
 }
 
-h2 span:hover {
-  cursor: pointer;
-}
-
 .hidden {
   display: none;
 }
