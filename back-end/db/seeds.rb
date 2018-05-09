@@ -38,6 +38,35 @@ data = [
     ]
   },
   {
+    id: 2,
+    name: "what a wonderful world",
+    duration: 130.59,
+    lyrics: [
+      { song_id: 2, start: 6.02, duration: 3.08, content: "I see trees of green" },
+      { song_id: 2, start: 10.72, duration: 5.32, content: "red roses too I see them bloom" },
+      { song_id: 2, start: 17.5, duration: 4.62, content: "for me and you And I think to myself" },
+      { song_id: 2, start: 24.44, duration: 3.24, content: "what a wonderful world" },
+      { song_id: 2, start: 32.48, duration: 3.32, content: "I see skies of blue" },
+      { song_id: 2, start: 37.02, duration: 2.56, content: "and clouds of white" },
+      { song_id: 2, start: 40.42, duration: 2.22, content: "The bright blessed day," },
+      { song_id: 2, start: 42.64, duration: 2.62, content: "the dark sacred night" },
+      { song_id: 2, start: 46.36, duration: 2, content: "And I think to myself" },
+      { song_id: 2, start: 51.28, duration: 2, content: "what a wonderful world" },
+      { song_id: 2, start: 59.37, duration: 4.95, content: "The colors of the rainbow so pretty in the sky" },
+      { song_id: 2, start: 66.02, duration: 4.46, content: "Are also on the faces of people going by" },
+      { song_id: 2, start: 71.8, duration: 7, content: "I see friends shaking hands saying how do you do" },
+      { song_id: 2, start: 80.4, duration: 4.28, content: "Theyre really saying I love you" },
+      { song_id: 2, start: 86.2, duration: 2, content: "I hear babies crying" },
+      { song_id: 2, start: 90.62, duration: 2, content: "I watch them grow" },
+      { song_id: 2, start: 94.14, duration: 2.22, content: "Theyll learn much more" },
+      { song_id: 2, start: 96.36, duration: 2, content: "than Ill never know" },
+      { song_id: 2, start: 99.44, duration: 2.04, content: "And I think to myself" },
+      { song_id: 2, start: 104.52, duration: 2, content: "what a wonderful world" },
+      { song_id: 2, start: 110.9, duration: 5.16, content: "Yes I think to myself" },
+      { song_id: 2, start: 118.46, duration: 2.56, content: "what a wonderful world" }
+    ]
+  },
+  {
     id: 4,
     name: "everlong",
     duration: 250,
