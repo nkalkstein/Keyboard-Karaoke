@@ -1,5 +1,6 @@
 class Api::V1::SongsController < ApplicationController
-  before_action :set_song, only: [:show,:update,:destroy]
+  skip_before_action :verify_authenticity_token
+  before_action :set_params, only: [:show,:update,:destroy]
 
   def index
     songs = Song.all
@@ -28,7 +29,7 @@ class Api::V1::SongsController < ApplicationController
 
   private
   def song_params
-    params.permit(:name, :duration)
+    params.permit(:name, :duration, :score)
   end
 
   def set_params
