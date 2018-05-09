@@ -14,7 +14,12 @@ document.addEventListener("DOMContentLoaded", function(){
   const wonderfulWorldH2 = document.getElementById('choose-wonderful-world')
 
   let counter = -1
+  let currentScore = 0
+  let strikes = 0
   let gameOver = false
+  let thisSong
+  let thisSongId
+  let highScore
   let videoSrc
   let songSrc
   let lyrics
@@ -92,12 +97,18 @@ document.addEventListener("DOMContentLoaded", function(){
       videoSrc = 'video/Roar.mp4'
       songSrc = 'mp3s/Roar.mp3'
       lyrics = lyricStore.filter((object) => object.song_id === 1)
+      thisSong = songStore.find((object) => object.id === 1)
+      thisSongId = thisSong.id
+      highScore = thisSong.score
       delay = 19500
     }
     else if(id === 'choose-everlong'){
       videoSrc = 'video/everlong.mp4'
       songSrc = 'mp3s/everlong.mp3'
       lyrics = lyricStore.filter((object) => object.song_id === 4)
+      thisSong = songStore.find((object) => object.id === 4)
+      thisSongId = thisSong.id
+      highScore = thisSong.score
       delay = 34000
     }
     else if(id === 'choose-wonderful-world'){
@@ -186,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function(){
   function strikeBox(){
     strikesDiv.innerHTML = `<h3>Ten Strikes and You're Out</h3>
                             <p> Strikes:  </p>
-                            <p id= strikesP> 0  </p>`
+                            <p id= strikesP>  ${strikes} </p>`
   }
 
 
@@ -197,10 +208,12 @@ document.addEventListener("DOMContentLoaded", function(){
     let last = array[length]
     if (last){
       if (!last.classList.contains("bg")){
-        document.getElementById("strikesP").innerText = parseInt(document.getElementById("strikesP").innerText) + 1
+        strikes +=1
+        renderStrikes()
         if (parseInt(document.getElementById("strikesP").innerText)  === 10){
           document.removeEventListener('keydown', typing, false)
           gameOver = true
+          finalScore()
           song.pause()
           video.pause()
           document.getElementById("strikesP").innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
@@ -214,20 +227,43 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   }
 
+  function renderStrikes(){
+    document.getElementById("strikesP").innerText = `${strikes}`
+
+
+  }
+
    function scoreBox(){
-      score = 0
       scoreDiv.innerHTML =`<p> Your score: </p>
-      <p id= "score" >  ${score} </p>
+      <p id= "score" >  ${currentScore} </p>
       <p> High Score: </p>
-      <p id="highScore">  </p>`
+      <p id="high-score"> ${highScore} </p>`
    }
 
    function tallyScore(){
       scoreArea = document.getElementById("score")
-      scoreArea.innerText = parseInt(scoreArea.innerText) + 1
-      // if (parseInt(`${score}`) > parseInt(`${highScore}`)){
-        Song.sendScore()
+      currentScore += 1
+      renderScore()
+   }
+
+   function renderScore(){
+      document.getElementById("score").innerText = `${currentScore}`
+
+   }
+
+  function finalScore(){
+    console.log("currentScore")
+      if (gameOver === true && (`${currentScore}` > `${highScore}`)){
+        Song.sendScore(`${thisSongId}`, `${currentScore}`)
+        highScore = `${currentScore}`
+        renderHighScore()
       }
+    }
+
+
+  function renderHighScore(){
+    document.getElementById("high-score").innerText = `${highScore}`
+  }
 })
 
 Song.getSongs()

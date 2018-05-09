@@ -27,17 +27,20 @@ class Song {
   }
 
 
-
-  static sendScore(score){
-    fetch(`http://localhost:3000/api/v1/songs/1`, {
+  static sendScore(idNum, score){
+    console.log(score)
+    console.log(idNum)
+    fetch(`http://localhost:3000/api/v1/songs/${idNum}`, {
     method: 'PATCH',
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json"
     },
-    body: JSON.stringify({
-      score: data
-    })
-  })
-}
+    body: JSON.stringify({score: `${score}`})
+  }).then(res=>res.json())
+  .then(res => console.log(res))
+  }
+
+
+
 }
