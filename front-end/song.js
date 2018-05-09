@@ -6,6 +6,13 @@ class Song {
     this.name = object.name
     this.duration = object.duration
 
+    if(object.score){
+      this.score = object.score
+    }
+    else {
+      this.score = 0
+    }
+
     songStore.push(this)
   }
 
