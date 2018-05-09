@@ -23,25 +23,26 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function displayLyrics(){
+    const roarLyrics = lyricStore.filter((object) => object.song_id === 1)
     let n = 0
     let duration = 0
     gameOver = false
 
     function displayLine(){
-      if(lyricStore[n] && !gameOver){
+      if(roarLyrics[n] && !gameOver){
         const words = document.createElement('p')
 
         // build the words with span elements around the letters
-        for (let i = 0; i < lyricStore[n].content.length; i++) {
+        for (let i = 0; i < roarLyrics[n].content.length; i++) {
           const span = document.createElement("span");
           span.classList.add("span");
-          span.innerHTML = lyricStore[n].content[i];
+          span.innerHTML = roarLyrics[n].content[i];
           words.appendChild(span);
         }
 
         tallyStrikes()
         lyricContainer.innerHTML = words.innerHTML
-        duration = lyricStore[n].duration * 1000
+        duration = roarLyrics[n].duration * 1000
         n++
         setTimeout(displayLine, duration)
 
@@ -93,9 +94,7 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     }
   }
-
-
-  Song.getSongs()
-  Lyric.getLyrics()
-
 })
+
+Song.getSongs()
+Lyric.getLyrics()
