@@ -145,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function(){
       renderHighScore()
       strikeBox.classList.remove('hidden')
       scoreBox.classList.remove('hidden')
+      highScoreBox.classList.remove('hidden')
 
       video.classList.remove('hidden')
       video.addEventListener('ended', finishGame, { once: true })
