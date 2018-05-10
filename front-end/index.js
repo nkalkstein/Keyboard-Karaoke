@@ -251,6 +251,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function finishGame(){
+    audio.pause()
     gameOver = true
     finalScore()
     chooseSongDiv.classList.remove('hidden')
