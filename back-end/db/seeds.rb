@@ -3,8 +3,8 @@ data = [
     id: 1,
     name: "roar",
     duration: 270.0,
-    username: "harim",
-    score: 698,
+    username: "arthur",
+    score: 711,
     lyrics: [
       { song_id: 1, start: 19.5, duration: 5.2, content: "I used to bite my tongue and hold my breath Scared to rock the boat and make a mess" },
       { song_id: 1, start: 24.7, duration: 5.3, content: "So I sat quietly agreed politely" },
@@ -43,8 +43,8 @@ data = [
     id: 2,
     name: "what a wonderful world",
     duration: 130.59,
-    username: "helen",
-    score: 437,
+    username: "adamtowers",
+    score: 482,
     lyrics: [
       { song_id: 2, start: 6.02, duration: 4.7, content: "I see trees of green" },
       { song_id: 2, start: 10.72, duration: 6.78, content: "red roses too I see them bloom" },
@@ -74,8 +74,8 @@ data = [
     id: 3,
     name: "gangsters paradise",
     duration: 256.0,
-    username: "n/a",
-    score: 0,
+    username: "kate",
+    score: 191,
     lyrics:
     [
     { song_id: 3, start: 26.48, duration: 2.64, content: "As I walk through the valley of the shadow of death"},
