@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function songMenu(){
+    header.classList.add('hidden')
     pressStart.classList.add('hidden')
     chooseSongDiv.classList.remove('hidden')
     document.addEventListener('keydown', menuSelect)
@@ -133,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function(){
   function startGame(event){
     if(event.which === 13){
       document.removeEventListener('keydown', startGame)
-      header.classList.add('hidden')
       chooseSongDiv.classList.add('hidden')
       pressStart.classList.add('hidden')
       lyricContainer.innerHTML = ''

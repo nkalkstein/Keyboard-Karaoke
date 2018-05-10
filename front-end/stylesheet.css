@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  font-family: Tahoma;
 }
 
 audio {
@@ -22,6 +23,12 @@ input {
   font-size: 16px;
 }
 
+form {
+  padding: 20px 20px 40px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 .hidden {
   display: none;
 }
@@ -30,12 +37,29 @@ input {
 	background-color: #04AF71;
 }
 
+.span {
+  font-family: 'Times New Roman';
+}
+
+.flex-item {
+  width: 30%;
+}
+
+#flex-container {
+  margin: 0 auto;
+  top: 5px;
+  display: flex;
+}
+
+#header {
+  margin-bottom: 100px;
+}
+
 #strikes {
   max-width: 711px;
   max-height: 360px;
   margin: 0 auto;
   top: 0; bottom: 0;
-  font-family: 'Trebuchet MS';
 }
 
 #press-start {
@@ -69,4 +93,9 @@ input {
   top: 0; bottom: 0;
   overflow: hidden;
   position: relative;
+}
+
+#choose-wonderful-world, #choose-everlong, #choose-roar {
+  padding: 8px;
+  border-radius: 4px;
 }
