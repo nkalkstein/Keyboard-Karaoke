@@ -87,6 +87,10 @@ form {
   background-color: white;
 }
 
+#choose-song-h2 {
+  text-decoration: underline;
+}
+
 #lyric-container {
   font-size: 40px;
   position: absolute;

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 
-  const headerDiv = document.getElementById('header')
+  const header = document.getElementById('header')
   const chooseSongDiv = document.getElementById('choose-song')
   const lyricContainer = document.getElementById('lyric-container')
   const song = document.getElementById('audio')
@@ -22,44 +22,42 @@ document.addEventListener("DOMContentLoaded", function(){
   const highScoreBox = document.getElementById('highscore-div')
   const usernameForm = document.getElementById('username-form')
   const usernameInput = document.getElementById('username-input')
+  const elem = document.getElementById('terminal');
 
   let counter = -1
   let gameOver = false
+  let string = elem.innerHTML;
+  let len = string.length;
+  let i = 0;
   let currentScore
   let strikes
   let thisSong
   let lyrics
   let delay
   let username
-
-  let elem = document.getElementById('terminal');
-  let string = elem.innerHTML;
-  let len = string.length;
-  let i = 0;
+  let countdown
+  let interval
 
   function loop() {
-      setTimeout(function() {
-          if (i == 0) elem.style.display = 'block';
-          elem.innerHTML = splitString(string, i);
-          i++;
-          if (i < len + 1) {
-              loop();
-              return;
-          }
-          elem.setAttribute('class', 'blink');
-      }, 200)
+    setTimeout(function() {
+      elem.style.display = 'block';
+      elem.innerHTML = splitString(string, i);
+      i++;
+
+      if (i < len + 1) {
+        loop();
+        return;
+      }
+
+      elem.setAttribute('class', 'blink');
+    }, 200)
   }
 
   function splitString(string, index) {
-      return string.substring(0, index);
+    return string.substring(0, index);
   }
 
   loop();
-
-
-
-
-
 
   usernameInput.focus()
   usernameForm.addEventListener('submit', submitUsername)
@@ -177,6 +175,7 @@ document.addEventListener("DOMContentLoaded", function(){
       pressStart.classList.add('hidden')
       lyricContainer.innerHTML = ''
 
+      countdown = 4
       strikes = 0
       currentScore = 0
       renderStrikes()
@@ -193,11 +192,19 @@ document.addEventListener("DOMContentLoaded", function(){
       video.currentTime = 0;
       song.play()
       video.play()
+      setTimeout(displayCountdown, delay - 4000)
       setTimeout(displayLyrics, delay)
     }
   }
 
+  function displayCountdown(){
+    interval = setInterval(function(){
+      lyricContainer.innerHTML = `<h2>${--countdown}</h2>`
+    }, 1000)
+  }
+
   function displayLyrics(){
+    window.clearInterval(interval)
     let n = 0
     let duration = 0
     gameOver = false
