@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const roarH2 = document.getElementById('choose-roar')
   const everlongH2 = document.getElementById('choose-everlong')
   const wonderfulWorldH2 = document.getElementById('choose-wonderful-world')
+  const gangsterH2 = document.getElementById('choose-gangster')
   const scoreBox = document.getElementById('score-div')
   const scoreArea = document.getElementById("score")
   const highScoreArea = document.getElementById("high-score")
@@ -46,13 +47,13 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function menuSelect(event){
-    const array = [wonderfulWorldH2, everlongH2, roarH2]
-    const mp3Src = ['mp3s/what-a-wonderful-world.mp3', 'mp3s/everlong.mp3', 'mp3s/Roar.mp3']
-    const currentTimeArr = [6, 34, 66]
+    const array = [wonderfulWorldH2, everlongH2, roarH2, gangsterH2]
+    const mp3Src = ['mp3s/what-a-wonderful-world.mp3', 'mp3s/everlong.mp3', 'mp3s/Roar.mp3', 'mp3s/gangster.mp3']
+    const currentTimeArr = [6, 34, 66, 63]
 
     // if user presses down
     if(event.which === 40){
-      if(counter > 1){
+      if(counter > 2){
         return
       }
       else if(counter === -1){
@@ -123,6 +124,13 @@ document.addEventListener("DOMContentLoaded", function(){
       lyrics = lyricStore.filter((object) => object.song_id === 2)
       thisSong = songStore.find((object) => object.id === 2)
       delay = 6020
+    }
+    else if(id === 'choose-gangster'){
+      video.src = 'video/gangster.mp4'
+      song.src = 'mp3s/gangster.mp3'
+      lyrics = lyricStore.filter((object) => object.song_id === 3)
+      thisSong = songStore.find((object) => object.id === 3)
+      delay = 26200
     }
 
     chooseSongDiv.classList.add('hidden')
