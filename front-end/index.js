@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
+
   const headerDiv = document.getElementById('header')
   const chooseSongDiv = document.getElementById('choose-song')
   const lyricContainer = document.getElementById('lyric-container')
@@ -30,6 +31,35 @@ document.addEventListener("DOMContentLoaded", function(){
   let lyrics
   let delay
   let username
+
+  let elem = document.getElementById('terminal');
+  let string = elem.innerHTML;
+  let len = string.length;
+  let i = 0;
+
+  function loop() {
+      setTimeout(function() {
+          if (i == 0) elem.style.display = 'block';
+          elem.innerHTML = splitString(string, i);
+          i++;
+          if (i < len + 1) {
+              loop();
+              return;
+          }
+          elem.setAttribute('class', 'blink');
+      }, 200)
+  }
+
+  function splitString(string, index) {
+      return string.substring(0, index);
+  }
+
+  loop();
+
+
+
+
+
 
   usernameInput.focus()
   usernameForm.addEventListener('submit', submitUsername)
