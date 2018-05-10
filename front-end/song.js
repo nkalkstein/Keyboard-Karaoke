@@ -5,13 +5,9 @@ class Song {
     this.id = object.id
     this.name = object.name
     this.duration = object.duration
+    this.username = object.username
+    this.score = object.score
 
-    if(object.score){
-      this.score = object.score
-    }
-    else {
-      this.score = 0
-    }
 
     songStore.push(this)
   }
@@ -34,7 +30,7 @@ class Song {
       "Content-Type": "application/json",
       "Accept": "application/json"
     },
-    body: JSON.stringify({score: `${this.score}`})
+    body: JSON.stringify({username: `${this.username}`, score: `${this.score}`})
   }).then(res=>res.json())
   }
 

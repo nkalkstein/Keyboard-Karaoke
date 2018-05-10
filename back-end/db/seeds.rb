@@ -3,6 +3,8 @@ data = [
     id: 1,
     name: "roar",
     duration: 270.0,
+    username: "harim",
+    score: 698,
     lyrics: [
       { song_id: 1, start: 19.5, duration: 5.2, content: "I used to bite my tongue and hold my breath Scared to rock the boat and make a mess" },
       { song_id: 1, start: 24.7, duration: 5.3, content: "So I sat quietly agreed politely" },
@@ -41,6 +43,8 @@ data = [
     id: 2,
     name: "what a wonderful world",
     duration: 130.59,
+    username: "helen",
+    score: 437,
     lyrics: [
       { song_id: 2, start: 6.02, duration: 4.7, content: "I see trees of green" },
       { song_id: 2, start: 10.72, duration: 6.78, content: "red roses too I see them bloom" },
@@ -70,6 +74,8 @@ data = [
     id: 4,
     name: "everlong",
     duration: 250,
+    username: "harim",
+    score: 925,
     lyrics: [
       { song_id: 4, start: 32.02, duration: 2.42, content: "Hello"},
       { song_id: 4, start: 34.44, duration: 4.48, content: "Ive waited here for you"},
@@ -109,7 +115,7 @@ data = [
 ]
 
 data.each do |song|
-  Song.create(id: song[:id], name: song[:name], duration: song[:duration])
+  Song.create(id: song[:id], name: song[:name], duration: song[:duration], username: song[:username], score: song[:score])
 
   song[:lyrics].each do |lyric_hash|
     Lyric.create(song_id: lyric_hash[:song_id], start: lyric_hash[:start], duration: lyric_hash[:duration], content: lyric_hash[:content])

@@ -17,24 +17,30 @@ document.addEventListener("DOMContentLoaded", function(){
   const highScoreArea = document.getElementById("high-score")
   const strikeBox = document.getElementById('strikes')
   const strikesCount = document.getElementById("strikesP")
+  const usernameForm = document.getElementById('username-form')
+  const usernameInput = document.getElementById('username-input')
 
   let counter = -1
+  let gameOver = false
   let currentScore
   let strikes
-  let gameOver = false
   let thisSong
   let lyrics
   let delay
+  let username
 
-  document.addEventListener('keydown', songMenu)
+  usernameForm.addEventListener('submit', submitUsername)
 
-  function songMenu(event){
-    if(event.which === 13){
-      document.removeEventListener('keydown', songMenu)
-      pressStart.classList.add('hidden')
-      chooseSongDiv.classList.remove('hidden')
-      document.addEventListener('keydown', menuSelect)
-    }
+  function submitUsername(event){
+    event.preventDefault()
+    username = usernameInput.value
+    songMenu()
+  }
+
+  function songMenu(){
+    pressStart.classList.add('hidden')
+    chooseSongDiv.classList.remove('hidden')
+    document.addEventListener('keydown', menuSelect)
   }
 
   function menuSelect(event){
@@ -118,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     chooseSongDiv.classList.add('hidden')
-    pressStart.innerHTML = "<h2>Get Ready! <br/> Press Enter To Play Song</h2>"
+    pressStart.innerHTML = "<h2>Press Enter To Play Song <br/><br/> You get a strike when you miss a lyric!</h2>"
     pressStart.classList.remove('hidden')
     document.addEventListener('keydown', startGame)
   }
@@ -224,8 +230,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function renderStrikes(){
     strikesCount.innerText = `${strikes}`
-
-
   }
 
    function tallyScore(){
@@ -235,7 +239,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
    function renderScore(){
       scoreArea.innerText = `${currentScore}`
-
    }
 
   function finalScore(){
@@ -247,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
   function renderHighScore(){
-    highScoreArea.innerText = `${thisSong.score}`
+    highScoreArea.innerText = `${thisSong.username} - ${thisSong.score}`
   }
 
   function finishGame(){

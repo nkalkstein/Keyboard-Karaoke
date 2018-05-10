@@ -16005,3 +16005,1148 @@ Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.8ms)
 >>>>>>> 75732e007634cb5b7cb41fafe0162f8efa3a86da
 
 
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-09 22:05:55 -0400
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-09 22:05:55 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mLyric Load (0.9ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 42ms (Views: 29.2ms | ActiveRecord: 2.7ms)
+
+
+Completed 200 OK in 49ms (Views: 30.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-09 22:14:41 -0400
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-09 22:14:41 -0400
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mLyric Load (0.5ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 08:53:12 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 08:53:12 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::LyricsController#index as */*
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (1.0ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 29ms (Views: 16.8ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 48ms (Views: 27.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-10 08:53:31 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hliutongco/.rvm/gems/ruby-2.3.3/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hliutongco/.rvm/gems/ruby-2.3.3/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (9.3ms)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 08:53:35 -0400
+Processing by Api::V1::SongsController#index as HTML
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSongs (20180507190136)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "duration" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180507190136"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLyrics (20180507190309)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "lyrics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "song_id" integer, "start" float, "duration" float, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180507190309"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddScoresToSongs (20180509125656)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "songs" ADD "score" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180509125656"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUsernameToSongs (20180510130317)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "songs" ADD "username" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180510130317"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-10 13:06:04.418454"], ["updated_at", "2018-05-10 13:06:04.418454"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("id", "name", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["name", "roar"], ["duration", 270.0], ["created_at", "2018-05-10 13:06:10.732351"], ["updated_at", "2018-05-10 13:06:10.732351"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 19.5], ["duration", 5.2], ["content", "I used to bite my tongue and hold my breath Scared to rock the boat and make a mess"], ["created_at", "2018-05-10 13:06:10.769948"], ["updated_at", "2018-05-10 13:06:10.769948"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 24.7], ["duration", 5.3], ["content", "So I sat quietly agreed politely"], ["created_at", "2018-05-10 13:06:10.773628"], ["updated_at", "2018-05-10 13:06:10.773628"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 30.0], ["duration", 5.4], ["content", "I guess that I forgot I had a choice I let you push me past the breaking point"], ["created_at", "2018-05-10 13:06:10.776928"], ["updated_at", "2018-05-10 13:06:10.776928"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 35.4], ["duration", 11.6], ["content", "I stood for nothing so I fell for everything"], ["created_at", "2018-05-10 13:06:10.781142"], ["updated_at", "2018-05-10 13:06:10.781142"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 47.0], ["duration", 5.0], ["content", "You held me down but I got up Already brushing off the dust"], ["created_at", "2018-05-10 13:06:10.784704"], ["updated_at", "2018-05-10 13:06:10.784704"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 52.0], ["duration", 5.8], ["content", "You hear my voice you hear that sound Like thunder gonna shake your ground"], ["created_at", "2018-05-10 13:06:10.787680"], ["updated_at", "2018-05-10 13:06:10.787680"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 57.8], ["duration", 5.2], ["content", "You held me down but I got up Get ready cause Ive had enough"], ["created_at", "2018-05-10 13:06:10.791185"], ["updated_at", "2018-05-10 13:06:10.791185"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 63.0], ["duration", 3.0], ["content", "I see it all I see it now"], ["created_at", "2018-05-10 13:06:10.794839"], ["updated_at", "2018-05-10 13:06:10.794839"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 66.0], ["duration", 4.5], ["content", "I got the eye of the tiger a fighter"], ["created_at", "2018-05-10 13:06:10.798439"], ["updated_at", "2018-05-10 13:06:10.798439"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 70.5], ["duration", 5.5], ["content", "dancing through the fire Cause I am a champion"], ["created_at", "2018-05-10 13:06:10.802181"], ["updated_at", "2018-05-10 13:06:10.802181"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 76.0], ["duration", 8.0], ["content", "and youre gonna hear me roar Louder louder than a lion"], ["created_at", "2018-05-10 13:06:10.805835"], ["updated_at", "2018-05-10 13:06:10.805835"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 84.0], ["duration", 3.0], ["content", "Cause I am a champion"], ["created_at", "2018-05-10 13:06:10.809655"], ["updated_at", "2018-05-10 13:06:10.809655"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 87.0], ["duration", 16.3], ["content", "and youre gonna hear me roar Oh oh oh oh oh oh Youre gonna hear me roar"], ["created_at", "2018-05-10 13:06:10.813976"], ["updated_at", "2018-05-10 13:06:10.813976"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 103.3], ["duration", 5.4], ["content", "Now Im floating like a butterfly Stinging like a bee I earned my stripes"], ["created_at", "2018-05-10 13:06:10.818646"], ["updated_at", "2018-05-10 13:06:10.818646"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 108.7], ["duration", 5.1], ["content", "I went from zero to my own hero"], ["created_at", "2018-05-10 13:06:10.822716"], ["updated_at", "2018-05-10 13:06:10.822716"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 113.8], ["duration", 5.2], ["content", "You held me down but I got up Already brushing off the dust"], ["created_at", "2018-05-10 13:06:10.826461"], ["updated_at", "2018-05-10 13:06:10.826461"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 119.0], ["duration", 5.0], ["content", "You hear my voice your hear that sound Like thunder gonna shake your ground"], ["created_at", "2018-05-10 13:06:10.830622"], ["updated_at", "2018-05-10 13:06:10.830622"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 124.0], ["duration", 5.5], ["content", "You held me down but I got up Get ready cause Ive had enough"], ["created_at", "2018-05-10 13:06:10.835344"], ["updated_at", "2018-05-10 13:06:10.835344"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 129.5], ["duration", 3.0], ["content", "I see it all I see it now"], ["created_at", "2018-05-10 13:06:10.840222"], ["updated_at", "2018-05-10 13:06:10.840222"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 132.5], ["duration", 4.5], ["content", "I got the eye of the tiger a fighter"], ["created_at", "2018-05-10 13:06:10.844875"], ["updated_at", "2018-05-10 13:06:10.844875"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 137.0], ["duration", 5.5], ["content", "dancing through the fire cause I am a champion"], ["created_at", "2018-05-10 13:06:10.848590"], ["updated_at", "2018-05-10 13:06:10.848590"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 142.5], ["duration", 8.0], ["content", "and youre gonna hear me roar Louder louder than a lion"], ["created_at", "2018-05-10 13:06:10.851858"], ["updated_at", "2018-05-10 13:06:10.851858"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 150.5], ["duration", 3.0], ["content", "cause I am a champion"], ["created_at", "2018-05-10 13:06:10.855835"], ["updated_at", "2018-05-10 13:06:10.855835"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 153.5], ["duration", 21.5], ["content", "and youre gonna hear me roar Oh oh oh oh oh oh Youre gonna hear me roar Oh oh oh oh oh oh"], ["created_at", "2018-05-10 13:06:10.864154"], ["updated_at", "2018-05-10 13:06:10.864154"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 175.0], ["duration", 19.0], ["content", "Youre gonna hear me roar"], ["created_at", "2018-05-10 13:06:10.868427"], ["updated_at", "2018-05-10 13:06:10.868427"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 194.0], ["duration", 4.5], ["content", "I got the eye of the tiger a fighter"], ["created_at", "2018-05-10 13:06:10.872007"], ["updated_at", "2018-05-10 13:06:10.872007"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 198.5], ["duration", 5.5], ["content", "dancing through the fire Cause I am a champion"], ["created_at", "2018-05-10 13:06:10.875999"], ["updated_at", "2018-05-10 13:06:10.875999"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 204.0], ["duration", 8.0], ["content", "and youre gonna hear me roar Louder louder than a lion"], ["created_at", "2018-05-10 13:06:10.880040"], ["updated_at", "2018-05-10 13:06:10.880040"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 212.0], ["duration", 3.0], ["content", "Cause I am a champion"], ["created_at", "2018-05-10 13:06:10.883414"], ["updated_at", "2018-05-10 13:06:10.883414"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 215.0], ["duration", 21.0], ["content", "and youre gonna hear me roar Oh oh oh oh oh oh Youre gonna hear me roar Oh oh oh oh oh oh"], ["created_at", "2018-05-10 13:06:10.887064"], ["updated_at", "2018-05-10 13:06:10.887064"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 236.0], ["duration", 5.0], ["content", "Youre gonna hear me roar"], ["created_at", "2018-05-10 13:06:10.890024"], ["updated_at", "2018-05-10 13:06:10.890024"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("id", "name", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["name", "what a wonderful world"], ["duration", 130.59], ["created_at", "2018-05-10 13:06:10.892816"], ["updated_at", "2018-05-10 13:06:10.892816"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 6.02], ["duration", 4.7], ["content", "I see trees of green"], ["created_at", "2018-05-10 13:06:10.896768"], ["updated_at", "2018-05-10 13:06:10.896768"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 10.72], ["duration", 6.78], ["content", "red roses too I see them bloom"], ["created_at", "2018-05-10 13:06:10.900210"], ["updated_at", "2018-05-10 13:06:10.900210"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 17.5], ["duration", 6.94], ["content", "for me and you And I think to myself"], ["created_at", "2018-05-10 13:06:10.903534"], ["updated_at", "2018-05-10 13:06:10.903534"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 24.44], ["duration", 8.04], ["content", "what a wonderful world"], ["created_at", "2018-05-10 13:06:10.907733"], ["updated_at", "2018-05-10 13:06:10.907733"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 32.48], ["duration", 4.54], ["content", "I see skies of blue"], ["created_at", "2018-05-10 13:06:10.911114"], ["updated_at", "2018-05-10 13:06:10.911114"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 37.02], ["duration", 3.4], ["content", "and clouds of white"], ["created_at", "2018-05-10 13:06:10.914378"], ["updated_at", "2018-05-10 13:06:10.914378"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 40.42], ["duration", 2.22], ["content", "The bright blessed day"], ["created_at", "2018-05-10 13:06:10.917143"], ["updated_at", "2018-05-10 13:06:10.917143"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 42.64], ["duration", 3.72], ["content", "the dark sacred night"], ["created_at", "2018-05-10 13:06:10.921391"], ["updated_at", "2018-05-10 13:06:10.921391"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 46.36], ["duration", 4.92], ["content", "And I think to myself"], ["created_at", "2018-05-10 13:06:10.924592"], ["updated_at", "2018-05-10 13:06:10.924592"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 51.28], ["duration", 8.09], ["content", "what a wonderful world"], ["created_at", "2018-05-10 13:06:10.928327"], ["updated_at", "2018-05-10 13:06:10.928327"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 59.37], ["duration", 6.65], ["content", "The colors of the rainbow so pretty in the sky"], ["created_at", "2018-05-10 13:06:10.932141"], ["updated_at", "2018-05-10 13:06:10.932141"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 66.02], ["duration", 5.78], ["content", "Are also on the faces of people going by"], ["created_at", "2018-05-10 13:06:10.936372"], ["updated_at", "2018-05-10 13:06:10.936372"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 71.8], ["duration", 8.6], ["content", "I see friends shaking hands saying how do you do"], ["created_at", "2018-05-10 13:06:10.939827"], ["updated_at", "2018-05-10 13:06:10.939827"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 80.4], ["duration", 5.8], ["content", "Theyre really saying I love you"], ["created_at", "2018-05-10 13:06:10.943773"], ["updated_at", "2018-05-10 13:06:10.943773"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 86.2], ["duration", 4.42], ["content", "I hear babies crying"], ["created_at", "2018-05-10 13:06:10.951421"], ["updated_at", "2018-05-10 13:06:10.951421"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 90.62], ["duration", 3.52], ["content", "I watch them grow"], ["created_at", "2018-05-10 13:06:10.954534"], ["updated_at", "2018-05-10 13:06:10.954534"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 94.14], ["duration", 2.22], ["content", "Theyll learn much more"], ["created_at", "2018-05-10 13:06:10.958727"], ["updated_at", "2018-05-10 13:06:10.958727"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 96.36], ["duration", 3.08], ["content", "than Ill ever know"], ["created_at", "2018-05-10 13:06:10.962147"], ["updated_at", "2018-05-10 13:06:10.962147"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 99.44], ["duration", 5.08], ["content", "And I think to myself"], ["created_at", "2018-05-10 13:06:10.965787"], ["updated_at", "2018-05-10 13:06:10.965787"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 104.52], ["duration", 6.38], ["content", "what a wonderful world"], ["created_at", "2018-05-10 13:06:10.968658"], ["updated_at", "2018-05-10 13:06:10.968658"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 110.9], ["duration", 7.56], ["content", "Yes I think to myself"], ["created_at", "2018-05-10 13:06:10.973537"], ["updated_at", "2018-05-10 13:06:10.973537"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 118.46], ["duration", 2.56], ["content", "what a wonderful world"], ["created_at", "2018-05-10 13:06:10.977314"], ["updated_at", "2018-05-10 13:06:10.977314"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("id", "name", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 4], ["name", "everlong"], ["duration", 250.0], ["created_at", "2018-05-10 13:06:10.980739"], ["updated_at", "2018-05-10 13:06:10.980739"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 32.02], ["duration", 2.42], ["content", "Hello"], ["created_at", "2018-05-10 13:06:10.984192"], ["updated_at", "2018-05-10 13:06:10.984192"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 34.44], ["duration", 4.48], ["content", "Ive waited here for you"], ["created_at", "2018-05-10 13:06:10.987355"], ["updated_at", "2018-05-10 13:06:10.987355"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 38.92], ["duration", 3.66], ["content", "everlong"], ["created_at", "2018-05-10 13:06:10.990427"], ["updated_at", "2018-05-10 13:06:10.990427"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 42.58], ["duration", 2.56], ["content", "Tonight"], ["created_at", "2018-05-10 13:06:10.994031"], ["updated_at", "2018-05-10 13:06:10.994031"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 45.14], ["duration", 4.0], ["content", "I throw myself into"], ["created_at", "2018-05-10 13:06:11.004719"], ["updated_at", "2018-05-10 13:06:11.004719"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 49.14], ["duration", 14.68], ["content", "And out of the red Out of her head she sang"], ["created_at", "2018-05-10 13:06:11.008192"], ["updated_at", "2018-05-10 13:06:11.008192"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 63.82], ["duration", 6.94], ["content", "Come down And waste away with me"], ["created_at", "2018-05-10 13:06:11.011477"], ["updated_at", "2018-05-10 13:06:11.011477"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 70.76], ["duration", 3.6], ["content", "down with me"], ["created_at", "2018-05-10 13:06:11.015266"], ["updated_at", "2018-05-10 13:06:11.015266"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 74.36], ["duration", 6.86], ["content", "Slow how You wanted it to be"], ["created_at", "2018-05-10 13:06:11.018248"], ["updated_at", "2018-05-10 13:06:11.018248"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 81.22], ["duration", 7.92], ["content", "Im over my head Out of her head she sang"], ["created_at", "2018-05-10 13:06:11.022051"], ["updated_at", "2018-05-10 13:06:11.022051"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 89.14], ["duration", 4.18], ["content", "And I wonder"], ["created_at", "2018-05-10 13:06:11.025934"], ["updated_at", "2018-05-10 13:06:11.025934"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 93.32], ["duration", 4.1], ["content", "When I sing along with you"], ["created_at", "2018-05-10 13:06:11.029034"], ["updated_at", "2018-05-10 13:06:11.029034"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 97.42], ["duration", 6.1], ["content", "If everything could ever feel this real forever"], ["created_at", "2018-05-10 13:06:11.032825"], ["updated_at", "2018-05-10 13:06:11.032825"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 103.52], ["duration", 6.04], ["content", "If anything could ever be this good again"], ["created_at", "2018-05-10 13:06:11.035965"], ["updated_at", "2018-05-10 13:06:11.035965"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 109.56], ["duration", 3.26], ["content", "The only thing Ill ever ask of you"], ["created_at", "2018-05-10 13:06:11.039839"], ["updated_at", "2018-05-10 13:06:11.039839"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 112.82], ["duration", 16.34], ["content", "You gotta promise not to stop when I say when she sang"], ["created_at", "2018-05-10 13:06:11.043166"], ["updated_at", "2018-05-10 13:06:11.043166"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 129.16], ["duration", 2.34], ["content", "Breathe out"], ["created_at", "2018-05-10 13:06:11.046836"], ["updated_at", "2018-05-10 13:06:11.046836"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 131.5], ["duration", 4.42], ["content", "so I can breathe you in"], ["created_at", "2018-05-10 13:06:11.052165"], ["updated_at", "2018-05-10 13:06:11.052165"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 135.92], ["duration", 3.78], ["content", "Hold you in"], ["created_at", "2018-05-10 13:06:11.054958"], ["updated_at", "2018-05-10 13:06:11.054958"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 139.7], ["duration", 2.52], ["content", "And now"], ["created_at", "2018-05-10 13:06:11.058317"], ["updated_at", "2018-05-10 13:06:11.058317"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 142.22], ["duration", 4.44], ["content", "I know youve always been"], ["created_at", "2018-05-10 13:06:11.061161"], ["updated_at", "2018-05-10 13:06:11.061161"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 146.66], ["duration", 7.78], ["content", "Out of your head Out of my head I sang"], ["created_at", "2018-05-10 13:06:11.064889"], ["updated_at", "2018-05-10 13:06:11.064889"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 154.44], ["duration", 4.14], ["content", "And I wonder"], ["created_at", "2018-05-10 13:06:11.069614"], ["updated_at", "2018-05-10 13:06:11.069614"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 158.58], ["duration", 4.2], ["content", "When I sing along with you"], ["created_at", "2018-05-10 13:06:11.073368"], ["updated_at", "2018-05-10 13:06:11.073368"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 162.78], ["duration", 6.08], ["content", "If everything could ever feel this real forever"], ["created_at", "2018-05-10 13:06:11.077401"], ["updated_at", "2018-05-10 13:06:11.077401"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 168.86], ["duration", 6.04], ["content", "If anything could ever be this good again"], ["created_at", "2018-05-10 13:06:11.081299"], ["updated_at", "2018-05-10 13:06:11.081299"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 174.9], ["duration", 3.12], ["content", "The only thing Ill ever ask of you"], ["created_at", "2018-05-10 13:06:11.085624"], ["updated_at", "2018-05-10 13:06:11.085624"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 178.02], ["duration", 32.18], ["content", "You gotta promise not to stop when I say when she sang"], ["created_at", "2018-05-10 13:06:11.089804"], ["updated_at", "2018-05-10 13:06:11.089804"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 210.2], ["duration", 4.24], ["content", "And I wonder"], ["created_at", "2018-05-10 13:06:11.092934"], ["updated_at", "2018-05-10 13:06:11.092934"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 214.44], ["duration", 5.94], ["content", "If everything could ever feel this real forever"], ["created_at", "2018-05-10 13:06:11.096247"], ["updated_at", "2018-05-10 13:06:11.096247"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 220.38], ["duration", 6.08], ["content", "If anything could ever be this good again"], ["created_at", "2018-05-10 13:06:11.099251"], ["updated_at", "2018-05-10 13:06:11.099251"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 226.46], ["duration", 3.18], ["content", "The only thing Ill ever ask of you"], ["created_at", "2018-05-10 13:06:11.102292"], ["updated_at", "2018-05-10 13:06:11.102292"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 229.64], ["duration", 4.18], ["content", "Youve got to promise not to stop when I say when"], ["created_at", "2018-05-10 13:06:11.105132"], ["updated_at", "2018-05-10 13:06:11.105132"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:06:57 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SongsController#index as HTML
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 23ms (Views: 9.6ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSongs (20180507190136)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "duration" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180507190136"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLyrics (20180507190309)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "lyrics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "song_id" integer, "start" float, "duration" float, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180507190309"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddScoresToSongs (20180509125656)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "songs" ADD "score" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180509125656"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUsernameToSongs (20180510130317)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "songs" ADD "username" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180510130317"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-10 13:08:31.485266"], ["updated_at", "2018-05-10 13:08:31.485266"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("id", "name", "duration", "created_at", "updated_at", "score", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["name", "roar"], ["duration", 270.0], ["created_at", "2018-05-10 13:08:36.254294"], ["updated_at", "2018-05-10 13:08:36.254294"], ["score", 698], ["username", "harim"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 19.5], ["duration", 5.2], ["content", "I used to bite my tongue and hold my breath Scared to rock the boat and make a mess"], ["created_at", "2018-05-10 13:08:36.286952"], ["updated_at", "2018-05-10 13:08:36.286952"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 24.7], ["duration", 5.3], ["content", "So I sat quietly agreed politely"], ["created_at", "2018-05-10 13:08:36.290977"], ["updated_at", "2018-05-10 13:08:36.290977"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 30.0], ["duration", 5.4], ["content", "I guess that I forgot I had a choice I let you push me past the breaking point"], ["created_at", "2018-05-10 13:08:36.294929"], ["updated_at", "2018-05-10 13:08:36.294929"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 35.4], ["duration", 11.6], ["content", "I stood for nothing so I fell for everything"], ["created_at", "2018-05-10 13:08:36.298755"], ["updated_at", "2018-05-10 13:08:36.298755"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 47.0], ["duration", 5.0], ["content", "You held me down but I got up Already brushing off the dust"], ["created_at", "2018-05-10 13:08:36.302400"], ["updated_at", "2018-05-10 13:08:36.302400"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 52.0], ["duration", 5.8], ["content", "You hear my voice you hear that sound Like thunder gonna shake your ground"], ["created_at", "2018-05-10 13:08:36.305777"], ["updated_at", "2018-05-10 13:08:36.305777"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 57.8], ["duration", 5.2], ["content", "You held me down but I got up Get ready cause Ive had enough"], ["created_at", "2018-05-10 13:08:36.309100"], ["updated_at", "2018-05-10 13:08:36.309100"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 63.0], ["duration", 3.0], ["content", "I see it all I see it now"], ["created_at", "2018-05-10 13:08:36.312196"], ["updated_at", "2018-05-10 13:08:36.312196"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 66.0], ["duration", 4.5], ["content", "I got the eye of the tiger a fighter"], ["created_at", "2018-05-10 13:08:36.316361"], ["updated_at", "2018-05-10 13:08:36.316361"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 70.5], ["duration", 5.5], ["content", "dancing through the fire Cause I am a champion"], ["created_at", "2018-05-10 13:08:36.320251"], ["updated_at", "2018-05-10 13:08:36.320251"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 76.0], ["duration", 8.0], ["content", "and youre gonna hear me roar Louder louder than a lion"], ["created_at", "2018-05-10 13:08:36.324141"], ["updated_at", "2018-05-10 13:08:36.324141"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 84.0], ["duration", 3.0], ["content", "Cause I am a champion"], ["created_at", "2018-05-10 13:08:36.328568"], ["updated_at", "2018-05-10 13:08:36.328568"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 87.0], ["duration", 16.3], ["content", "and youre gonna hear me roar Oh oh oh oh oh oh Youre gonna hear me roar"], ["created_at", "2018-05-10 13:08:36.331820"], ["updated_at", "2018-05-10 13:08:36.331820"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 103.3], ["duration", 5.4], ["content", "Now Im floating like a butterfly Stinging like a bee I earned my stripes"], ["created_at", "2018-05-10 13:08:36.335082"], ["updated_at", "2018-05-10 13:08:36.335082"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 108.7], ["duration", 5.1], ["content", "I went from zero to my own hero"], ["created_at", "2018-05-10 13:08:36.338345"], ["updated_at", "2018-05-10 13:08:36.338345"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 113.8], ["duration", 5.2], ["content", "You held me down but I got up Already brushing off the dust"], ["created_at", "2018-05-10 13:08:36.342454"], ["updated_at", "2018-05-10 13:08:36.342454"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 119.0], ["duration", 5.0], ["content", "You hear my voice your hear that sound Like thunder gonna shake your ground"], ["created_at", "2018-05-10 13:08:36.346074"], ["updated_at", "2018-05-10 13:08:36.346074"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 124.0], ["duration", 5.5], ["content", "You held me down but I got up Get ready cause Ive had enough"], ["created_at", "2018-05-10 13:08:36.349370"], ["updated_at", "2018-05-10 13:08:36.349370"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 129.5], ["duration", 3.0], ["content", "I see it all I see it now"], ["created_at", "2018-05-10 13:08:36.352774"], ["updated_at", "2018-05-10 13:08:36.352774"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 132.5], ["duration", 4.5], ["content", "I got the eye of the tiger a fighter"], ["created_at", "2018-05-10 13:08:36.361286"], ["updated_at", "2018-05-10 13:08:36.361286"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 137.0], ["duration", 5.5], ["content", "dancing through the fire cause I am a champion"], ["created_at", "2018-05-10 13:08:36.365346"], ["updated_at", "2018-05-10 13:08:36.365346"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 142.5], ["duration", 8.0], ["content", "and youre gonna hear me roar Louder louder than a lion"], ["created_at", "2018-05-10 13:08:36.369537"], ["updated_at", "2018-05-10 13:08:36.369537"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 150.5], ["duration", 3.0], ["content", "cause I am a champion"], ["created_at", "2018-05-10 13:08:36.373632"], ["updated_at", "2018-05-10 13:08:36.373632"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 153.5], ["duration", 21.5], ["content", "and youre gonna hear me roar Oh oh oh oh oh oh Youre gonna hear me roar Oh oh oh oh oh oh"], ["created_at", "2018-05-10 13:08:36.377959"], ["updated_at", "2018-05-10 13:08:36.377959"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 175.0], ["duration", 19.0], ["content", "Youre gonna hear me roar"], ["created_at", "2018-05-10 13:08:36.382502"], ["updated_at", "2018-05-10 13:08:36.382502"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 194.0], ["duration", 4.5], ["content", "I got the eye of the tiger a fighter"], ["created_at", "2018-05-10 13:08:36.386674"], ["updated_at", "2018-05-10 13:08:36.386674"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 198.5], ["duration", 5.5], ["content", "dancing through the fire Cause I am a champion"], ["created_at", "2018-05-10 13:08:36.390521"], ["updated_at", "2018-05-10 13:08:36.390521"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 204.0], ["duration", 8.0], ["content", "and youre gonna hear me roar Louder louder than a lion"], ["created_at", "2018-05-10 13:08:36.394265"], ["updated_at", "2018-05-10 13:08:36.394265"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 212.0], ["duration", 3.0], ["content", "Cause I am a champion"], ["created_at", "2018-05-10 13:08:36.398137"], ["updated_at", "2018-05-10 13:08:36.398137"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 215.0], ["duration", 21.0], ["content", "and youre gonna hear me roar Oh oh oh oh oh oh Youre gonna hear me roar Oh oh oh oh oh oh"], ["created_at", "2018-05-10 13:08:36.401644"], ["updated_at", "2018-05-10 13:08:36.401644"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 1], ["start", 236.0], ["duration", 5.0], ["content", "Youre gonna hear me roar"], ["created_at", "2018-05-10 13:08:36.405530"], ["updated_at", "2018-05-10 13:08:36.405530"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("id", "name", "duration", "created_at", "updated_at", "score", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["name", "what a wonderful world"], ["duration", 130.59], ["created_at", "2018-05-10 13:08:36.408300"], ["updated_at", "2018-05-10 13:08:36.408300"], ["score", 437], ["username", "helen"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 6.02], ["duration", 4.7], ["content", "I see trees of green"], ["created_at", "2018-05-10 13:08:36.411859"], ["updated_at", "2018-05-10 13:08:36.411859"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 10.72], ["duration", 6.78], ["content", "red roses too I see them bloom"], ["created_at", "2018-05-10 13:08:36.416145"], ["updated_at", "2018-05-10 13:08:36.416145"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 17.5], ["duration", 6.94], ["content", "for me and you And I think to myself"], ["created_at", "2018-05-10 13:08:36.420054"], ["updated_at", "2018-05-10 13:08:36.420054"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 24.44], ["duration", 8.04], ["content", "what a wonderful world"], ["created_at", "2018-05-10 13:08:36.423917"], ["updated_at", "2018-05-10 13:08:36.423917"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 32.48], ["duration", 4.54], ["content", "I see skies of blue"], ["created_at", "2018-05-10 13:08:36.427490"], ["updated_at", "2018-05-10 13:08:36.427490"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 37.02], ["duration", 3.4], ["content", "and clouds of white"], ["created_at", "2018-05-10 13:08:36.430364"], ["updated_at", "2018-05-10 13:08:36.430364"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 40.42], ["duration", 2.22], ["content", "The bright blessed day"], ["created_at", "2018-05-10 13:08:36.433954"], ["updated_at", "2018-05-10 13:08:36.433954"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 42.64], ["duration", 3.72], ["content", "the dark sacred night"], ["created_at", "2018-05-10 13:08:36.437266"], ["updated_at", "2018-05-10 13:08:36.437266"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 46.36], ["duration", 4.92], ["content", "And I think to myself"], ["created_at", "2018-05-10 13:08:36.441042"], ["updated_at", "2018-05-10 13:08:36.441042"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 51.28], ["duration", 8.09], ["content", "what a wonderful world"], ["created_at", "2018-05-10 13:08:36.444166"], ["updated_at", "2018-05-10 13:08:36.444166"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 59.37], ["duration", 6.65], ["content", "The colors of the rainbow so pretty in the sky"], ["created_at", "2018-05-10 13:08:36.451453"], ["updated_at", "2018-05-10 13:08:36.451453"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 66.02], ["duration", 5.78], ["content", "Are also on the faces of people going by"], ["created_at", "2018-05-10 13:08:36.455069"], ["updated_at", "2018-05-10 13:08:36.455069"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 71.8], ["duration", 8.6], ["content", "I see friends shaking hands saying how do you do"], ["created_at", "2018-05-10 13:08:36.458519"], ["updated_at", "2018-05-10 13:08:36.458519"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 80.4], ["duration", 5.8], ["content", "Theyre really saying I love you"], ["created_at", "2018-05-10 13:08:36.461381"], ["updated_at", "2018-05-10 13:08:36.461381"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 86.2], ["duration", 4.42], ["content", "I hear babies crying"], ["created_at", "2018-05-10 13:08:36.464783"], ["updated_at", "2018-05-10 13:08:36.464783"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 90.62], ["duration", 3.52], ["content", "I watch them grow"], ["created_at", "2018-05-10 13:08:36.468002"], ["updated_at", "2018-05-10 13:08:36.468002"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 94.14], ["duration", 2.22], ["content", "Theyll learn much more"], ["created_at", "2018-05-10 13:08:36.471816"], ["updated_at", "2018-05-10 13:08:36.471816"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 96.36], ["duration", 3.08], ["content", "than Ill ever know"], ["created_at", "2018-05-10 13:08:36.475684"], ["updated_at", "2018-05-10 13:08:36.475684"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 99.44], ["duration", 5.08], ["content", "And I think to myself"], ["created_at", "2018-05-10 13:08:36.479081"], ["updated_at", "2018-05-10 13:08:36.479081"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 104.52], ["duration", 6.38], ["content", "what a wonderful world"], ["created_at", "2018-05-10 13:08:36.482724"], ["updated_at", "2018-05-10 13:08:36.482724"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 110.9], ["duration", 7.56], ["content", "Yes I think to myself"], ["created_at", "2018-05-10 13:08:36.486396"], ["updated_at", "2018-05-10 13:08:36.486396"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 2], ["start", 118.46], ["duration", 2.56], ["content", "what a wonderful world"], ["created_at", "2018-05-10 13:08:36.490204"], ["updated_at", "2018-05-10 13:08:36.490204"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("id", "name", "duration", "created_at", "updated_at", "score", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["name", "everlong"], ["duration", 250.0], ["created_at", "2018-05-10 13:08:36.493608"], ["updated_at", "2018-05-10 13:08:36.493608"], ["score", 925], ["username", "harim"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 32.02], ["duration", 2.42], ["content", "Hello"], ["created_at", "2018-05-10 13:08:36.498056"], ["updated_at", "2018-05-10 13:08:36.498056"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 34.44], ["duration", 4.48], ["content", "Ive waited here for you"], ["created_at", "2018-05-10 13:08:36.501694"], ["updated_at", "2018-05-10 13:08:36.501694"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 38.92], ["duration", 3.66], ["content", "everlong"], ["created_at", "2018-05-10 13:08:36.504814"], ["updated_at", "2018-05-10 13:08:36.504814"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 42.58], ["duration", 2.56], ["content", "Tonight"], ["created_at", "2018-05-10 13:08:36.508154"], ["updated_at", "2018-05-10 13:08:36.508154"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 45.14], ["duration", 4.0], ["content", "I throw myself into"], ["created_at", "2018-05-10 13:08:36.511633"], ["updated_at", "2018-05-10 13:08:36.511633"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 49.14], ["duration", 14.68], ["content", "And out of the red Out of her head she sang"], ["created_at", "2018-05-10 13:08:36.523611"], ["updated_at", "2018-05-10 13:08:36.523611"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 63.82], ["duration", 6.94], ["content", "Come down And waste away with me"], ["created_at", "2018-05-10 13:08:36.527117"], ["updated_at", "2018-05-10 13:08:36.527117"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 70.76], ["duration", 3.6], ["content", "down with me"], ["created_at", "2018-05-10 13:08:36.531017"], ["updated_at", "2018-05-10 13:08:36.531017"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 74.36], ["duration", 6.86], ["content", "Slow how You wanted it to be"], ["created_at", "2018-05-10 13:08:36.534767"], ["updated_at", "2018-05-10 13:08:36.534767"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 81.22], ["duration", 7.92], ["content", "Im over my head Out of her head she sang"], ["created_at", "2018-05-10 13:08:36.538058"], ["updated_at", "2018-05-10 13:08:36.538058"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 89.14], ["duration", 4.18], ["content", "And I wonder"], ["created_at", "2018-05-10 13:08:36.541222"], ["updated_at", "2018-05-10 13:08:36.541222"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 93.32], ["duration", 4.1], ["content", "When I sing along with you"], ["created_at", "2018-05-10 13:08:36.543930"], ["updated_at", "2018-05-10 13:08:36.543930"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 97.42], ["duration", 6.1], ["content", "If everything could ever feel this real forever"], ["created_at", "2018-05-10 13:08:36.547172"], ["updated_at", "2018-05-10 13:08:36.547172"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (2.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 103.52], ["duration", 6.04], ["content", "If anything could ever be this good again"], ["created_at", "2018-05-10 13:08:36.552468"], ["updated_at", "2018-05-10 13:08:36.552468"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 109.56], ["duration", 3.26], ["content", "The only thing Ill ever ask of you"], ["created_at", "2018-05-10 13:08:36.555902"], ["updated_at", "2018-05-10 13:08:36.555902"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 112.82], ["duration", 16.34], ["content", "You gotta promise not to stop when I say when she sang"], ["created_at", "2018-05-10 13:08:36.559000"], ["updated_at", "2018-05-10 13:08:36.559000"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 129.16], ["duration", 2.34], ["content", "Breathe out"], ["created_at", "2018-05-10 13:08:36.561840"], ["updated_at", "2018-05-10 13:08:36.561840"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 131.5], ["duration", 4.42], ["content", "so I can breathe you in"], ["created_at", "2018-05-10 13:08:36.564947"], ["updated_at", "2018-05-10 13:08:36.564947"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 135.92], ["duration", 3.78], ["content", "Hold you in"], ["created_at", "2018-05-10 13:08:36.567903"], ["updated_at", "2018-05-10 13:08:36.567903"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 139.7], ["duration", 2.52], ["content", "And now"], ["created_at", "2018-05-10 13:08:36.570965"], ["updated_at", "2018-05-10 13:08:36.570965"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 142.22], ["duration", 4.44], ["content", "I know youve always been"], ["created_at", "2018-05-10 13:08:36.574174"], ["updated_at", "2018-05-10 13:08:36.574174"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 146.66], ["duration", 7.78], ["content", "Out of your head Out of my head I sang"], ["created_at", "2018-05-10 13:08:36.577034"], ["updated_at", "2018-05-10 13:08:36.577034"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 154.44], ["duration", 4.14], ["content", "And I wonder"], ["created_at", "2018-05-10 13:08:36.579853"], ["updated_at", "2018-05-10 13:08:36.579853"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 158.58], ["duration", 4.2], ["content", "When I sing along with you"], ["created_at", "2018-05-10 13:08:36.582833"], ["updated_at", "2018-05-10 13:08:36.582833"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 162.78], ["duration", 6.08], ["content", "If everything could ever feel this real forever"], ["created_at", "2018-05-10 13:08:36.585649"], ["updated_at", "2018-05-10 13:08:36.585649"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 168.86], ["duration", 6.04], ["content", "If anything could ever be this good again"], ["created_at", "2018-05-10 13:08:36.588924"], ["updated_at", "2018-05-10 13:08:36.588924"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 174.9], ["duration", 3.12], ["content", "The only thing Ill ever ask of you"], ["created_at", "2018-05-10 13:08:36.592110"], ["updated_at", "2018-05-10 13:08:36.592110"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 178.02], ["duration", 32.18], ["content", "You gotta promise not to stop when I say when she sang"], ["created_at", "2018-05-10 13:08:36.595816"], ["updated_at", "2018-05-10 13:08:36.595816"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 210.2], ["duration", 4.24], ["content", "And I wonder"], ["created_at", "2018-05-10 13:08:36.599462"], ["updated_at", "2018-05-10 13:08:36.599462"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 214.44], ["duration", 5.94], ["content", "If everything could ever feel this real forever"], ["created_at", "2018-05-10 13:08:36.603940"], ["updated_at", "2018-05-10 13:08:36.603940"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 220.38], ["duration", 6.08], ["content", "If anything could ever be this good again"], ["created_at", "2018-05-10 13:08:36.607898"], ["updated_at", "2018-05-10 13:08:36.607898"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 226.46], ["duration", 3.18], ["content", "The only thing Ill ever ask of you"], ["created_at", "2018-05-10 13:08:36.611176"], ["updated_at", "2018-05-10 13:08:36.611176"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "lyrics" ("song_id", "start", "duration", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["song_id", 4], ["start", 229.64], ["duration", 4.18], ["content", "Youve got to promise not to stop when I say when"], ["created_at", "2018-05-10 13:08:36.616026"], ["updated_at", "2018-05-10 13:08:36.616026"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:08:52 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SongsController#index as HTML
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 24ms (Views: 9.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:10:20 -0400
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:10:20 -0400
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mLyric Load (0.4ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 34ms (Views: 28.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:10:26 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:10:26 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (0.4ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:11:11 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:11:11 -0400
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (0.4ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:11:18 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:11:18 -0400
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (0.4ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:14:06 -0400
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:14:06 -0400
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mLyric Load (0.6ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:20:07 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:20:07 -0400
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mLyric Load (0.6ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:20:46 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:20:46 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (1.1ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:20:52 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:20:52 -0400
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mLyric Load (0.7ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:21:17 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:21:17 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (0.7ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:21:27 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:21:27 -0400
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (0.7ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:21:35 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:21:35 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (0.7ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:21:42 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:21:42 -0400
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mLyric Load (0.6ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:22:21 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:22:21 -0400
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (0.4ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:23:01 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:23:01 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (0.8ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:23:05 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:23:05 -0400
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (0.8ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:23:18 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:23:18 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (0.6ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:23:26 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:23:26 -0400
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (0.7ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:26:57 -0400
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:26:57 -0400
+Processing by Api::V1::LyricsController#index as */*
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mLyric Load (0.5ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:27:58 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:27:58 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (0.6ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:28:28 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:28:28 -0400
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (0.5ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:28:54 -0400
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:28:54 -0400
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mLyric Load (0.5ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:31:19 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:31:19 -0400
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (0.5ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:33:01 -0400
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:33:01 -0400
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mLyric Load (0.5ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:33:28 -0400
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:33:28 -0400
+Processing by Api::V1::SongsController#index as */*
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mLyric Load (0.6ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 09:33:45 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 09:33:45 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (0.4ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+

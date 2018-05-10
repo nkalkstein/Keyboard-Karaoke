@@ -29,7 +29,7 @@ class Api::V1::SongsController < ApplicationController
 
   private
   def song_params
-    params.permit(:name, :duration, :score)
+    params.permit(:name, :duration, :username, :score)
   end
 
   def set_params
