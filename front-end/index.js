@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function(){
   let delay
   let username
 
+  usernameInput.focus()
   usernameForm.addEventListener('submit', submitUsername)
 
   function submitUsername(event){

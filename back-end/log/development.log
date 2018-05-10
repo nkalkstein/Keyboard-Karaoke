@@ -26655,3 +26655,87 @@ Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
 Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 14:33:56 -0400
+Processing by Api::V1::LyricsController#index as */*
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 14:33:56 -0400
+  [1m[36mLyric Load (0.8ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Processing by Api::V1::SongsController#index as */*
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 14:34:37 -0400
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 14:34:37 -0400
+Processing by Api::V1::LyricsController#index as */*
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mLyric Load (0.6ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 14:38:15 -0400
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 14:38:15 -0400
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mLyric Load (0.7ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 14:45:39 -0400
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 14:45:39 -0400
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Processing by Api::V1::LyricsController#index as */*
+  [1m[36mLyric Load (0.6ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 14:57:58 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 14:57:58 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (0.9ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 14:58:02 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 14:58:02 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (0.6ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/songs" for 127.0.0.1 at 2018-05-10 14:58:08 -0400
+Processing by Api::V1::SongsController#index as */*
+Started GET "/api/v1/lyrics" for 127.0.0.1 at 2018-05-10 14:58:08 -0400
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by Api::V1::LyricsController#index as */*
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mLyric Load (1.5ms)[0m  [1m[34mSELECT "lyrics".* FROM "lyrics"[0m
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 1.5ms)
+
+
