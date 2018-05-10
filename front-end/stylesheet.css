@@ -25,7 +25,7 @@ input {
 
 form {
   padding: 20px 20px 40px 20px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
 }
 
@@ -35,6 +35,15 @@ form {
 
 .bg {
 	background-color: #04AF71;
+}
+
+.song-select:before {
+  content:url('Heart.png');
+  margin-right: 3px;
+}
+
+.song-select {
+  color: #D40000;
 }
 
 .span {
@@ -93,9 +102,4 @@ form {
   top: 0; bottom: 0;
   overflow: hidden;
   position: relative;
-}
-
-#choose-wonderful-world, #choose-everlong, #choose-roar, #choose-gangster {
-  padding: 8px;
-  border-radius: 4px;
 }

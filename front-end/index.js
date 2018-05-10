@@ -58,17 +58,17 @@ document.addEventListener("DOMContentLoaded", function(){
       }
       else if(counter === -1){
         counter += 1
-        array[counter].classList.add('bg')
+        array[counter].classList.add('song-select')
         song.src = mp3Src[counter]
         song.currentTime = currentTimeArr[counter];
         song.play()
       }
       else {
-        array[counter].classList.remove('bg')
+        array[counter].classList.remove('song-select')
         song.pause()
         counter += 1
 
-        array[counter].classList.add('bg')
+        array[counter].classList.add('song-select')
         song.src = mp3Src[counter]
         song.currentTime = currentTimeArr[counter];
         song.play()
@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", function(){
         return
       }
       else {
-      array[counter].classList.remove('bg')
+      array[counter].classList.remove('song-select')
       song.pause()
       counter -= 1
 
-      array[counter].classList.add('bg')
+      array[counter].classList.add('song-select')
       song.src = mp3Src[counter]
       song.currentTime = currentTimeArr[counter];
       song.play()
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function(){
       }
 
       song.pause()
-      array[counter].classList.remove('bg')
+      array[counter].classList.remove('song-select')
       document.removeEventListener('keydown', menuSelect)
       chooseSong(array[counter].id)
     }
