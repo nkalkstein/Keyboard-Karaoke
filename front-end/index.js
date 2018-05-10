@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const highScoreArea = document.getElementById("high-score")
   const strikeBox = document.getElementById('strikes')
   const strikesCount = document.getElementById("strikesP")
+  const highScoreBox = document.getElementById('highscore-div')
   const usernameForm = document.getElementById('username-form')
   const usernameInput = document.getElementById('username-input')
 
@@ -244,6 +245,7 @@ document.addEventListener("DOMContentLoaded", function(){
   function finalScore(){
       if (gameOver === true && currentScore > thisSong.score){
         thisSong.score = currentScore
+        thisSong.username = username
         thisSong.sendScore()
         renderHighScore()
       }
