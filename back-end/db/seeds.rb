@@ -43,8 +43,8 @@ data = [
     id: 2,
     name: "what a wonderful world",
     duration: 130.59,
-    username: "adamtowers",
-    score: 482,
+    username: "noah",
+    score: 521,
     lyrics: [
       { song_id: 2, start: 6.02, duration: 4.7, content: "I see trees of green" },
       { song_id: 2, start: 10.72, duration: 6.78, content: "red roses too I see them bloom" },
@@ -74,8 +74,8 @@ data = [
     id: 3,
     name: "gangsters paradise",
     duration: 256.0,
-    username: "kate",
-    score: 191,
+    username: "noah",
+    score: 201,
     lyrics:
     [
     { song_id: 3, start: 26.48, duration: 2.64, content: "As I walk through the valley of the shadow of death"},

@@ -239,13 +239,13 @@ document.addEventListener("DOMContentLoaded", function(){
     const typed = String.fromCharCode(event.which);
 
     for (let i = 0; i < spans.length; ++i) {
+      if (spans[i].innerHTML.toLowerCase() === typed.toLowerCase()) {
         if (spans[i].classList.contains("bg")) { // if it already has class with the bg color then check the next one
           continue;
-        } else if (!spans[i].classList.contains("bg") && !spans[i-1] || spans[i-1].classList.contains("bg")) {
-
-          if (spans[i].innerHTML.toLowerCase() === typed.toLowerCase()) {
-            spans[i].classList.add("bg");
-            tallyScore()
+        }
+        else if (!spans[i].classList.contains("bg") && !spans[i-1] || spans[i-1].classList.contains("bg")) {
+          spans[i].classList.add("bg");
+          tallyScore()
         }
       }
     }
