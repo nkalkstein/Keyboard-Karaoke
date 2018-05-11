@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-
   const header = document.getElementById('header')
   const chooseSongDiv = document.getElementById('choose-song')
   const lyricContainer = document.getElementById('lyric-container')
@@ -14,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const everlongH2 = document.getElementById('choose-everlong')
   const wonderfulWorldH2 = document.getElementById('choose-wonderful-world')
   const gangsterH2 = document.getElementById('choose-gangster')
+  const bustaH2 = document.getElementById('choose-busta')
   const scoreBox = document.getElementById('score-div')
   const scoreArea = document.getElementById("score")
   const highScoreArea = document.getElementById("high-score")
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const usernameForm = document.getElementById('username-form')
   const usernameInput = document.getElementById('username-input')
   const elem = document.getElementById('terminal');
+  const tenStrikes = document.getElementById('ten-strikes')
 
   let counter = -1
   let gameOver = false
@@ -76,13 +77,13 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function menuSelect(event){
-    const array = [wonderfulWorldH2, everlongH2, roarH2, gangsterH2]
-    const mp3Src = ['mp3s/what-a-wonderful-world.mp3', 'mp3s/everlong.mp3', 'mp3s/Roar.mp3', 'mp3s/gangster.mp3']
-    const currentTimeArr = [6, 34, 66, 63]
+    const array = [wonderfulWorldH2, everlongH2, roarH2, gangsterH2, bustaH2]
+    const mp3Src = ['mp3s/what-a-wonderful-world.mp3', 'mp3s/everlong.mp3', 'mp3s/Roar.mp3', 'mp3s/gangster.mp3', 'mp3s/busta.wav']
+    const currentTimeArr = [6, 34, 66, 63, 8]
 
     // if user presses down
     if(event.which === 40){
-      if(counter > 2){
+      if(counter > 3){
         return
       }
       else if(counter === -1){
@@ -161,9 +162,22 @@ document.addEventListener("DOMContentLoaded", function(){
       thisSong = songStore.find((object) => object.id === 3)
       delay = 26200
     }
+    else if(id === 'choose-busta'){
+      video.src = 'video/busta.mp4'
+      song.src = 'mp3s/busta.wav'
+      lyrics = lyricStore.filter((object) => object.song_id === 5)
+      thisSong = songStore.find((object) => object.id === 5)
+      delay = 8500
+    }
 
     chooseSongDiv.classList.add('hidden')
-    pressStart.innerHTML = "<h2>Press Enter To Play Song <br/><br/> You get a strike when you miss a lyric!</h2>"
+
+    if(thisSong.id === 5){
+      pressStart.innerHTML = "<h2>Press Enter To Play Song  <br/><br/> There are NO strikes! </h2>"
+    }
+    else {
+      pressStart.innerHTML = "<h2>Press Enter To Play Song <br/><br/> You get a strike when you can't complete a lyric!</h2>"
+    }
     pressStart.classList.remove('hidden')
     document.addEventListener('keydown', startGame)
   }
@@ -221,7 +235,10 @@ document.addEventListener("DOMContentLoaded", function(){
           words.appendChild(span);
         }
 
-        tallyStrikes()
+        if(thisSong.id !== 5){
+          tallyStrikes()
+        }
+
         lyricContainer.innerHTML = words.innerHTML
         duration = lyrics[n].duration * 1000
         n++
@@ -262,11 +279,11 @@ document.addEventListener("DOMContentLoaded", function(){
         if (strikes === 10){
           document.removeEventListener('keydown', typing, false)
           gameOver = true
-          finalScore()
           song.pause()
           video.pause()
           strikesCount.innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
           chooseSongDiv.classList.remove('hidden')
+          finalScore()
 
           // this counter is for the song select menu
           counter = -1
@@ -277,12 +294,21 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function renderStrikes(){
-    strikesCount.innerText = `${strikes}`
+    if(thisSong.id === 5){
+      strikesCount.innerText = `∞`
+      tenStrikes.classList.add('hidden')
+    }
+    else {
+      strikesCount.innerText = `${strikes}`
+      tenStrikes.classList.remove('hidden')
+    }
   }
 
    function tallyScore(){
-      currentScore += 1
-      renderScore()
+     if(!gameOver){
+       currentScore += 1
+     }
+       renderScore()
    }
 
    function renderScore(){
@@ -305,8 +331,9 @@ document.addEventListener("DOMContentLoaded", function(){
   function finishGame(){
     audio.pause()
     gameOver = true
-    finalScore()
+    strikesCount.innerText = `You beat the song with ${strikes} strikes!`
     chooseSongDiv.classList.remove('hidden')
+    finalScore()
 
     // this counter is for the song select menu
     counter = -1
