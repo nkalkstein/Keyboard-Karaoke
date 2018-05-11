@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const highScoreArea = document.getElementById("high-score")
   const strikeBox = document.getElementById('strikes')
   const strikesCount = document.getElementById("strikesP")
+  const loseBox = document.getElementById("lose")
   const highScoreBox = document.getElementById('highscore-div')
   const usernameForm = document.getElementById('username-form')
   const usernameInput = document.getElementById('username-input')
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   loop();
+
 
   usernameInput.focus()
   usernameForm.addEventListener('submit', submitUsername)
@@ -171,14 +173,15 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     chooseSongDiv.classList.add('hidden')
-
+    loseBox.classList.add('hidden')
+    scoreBox.classList.add('hidden')
+    highScoreBox.classList.add('hidden')
     if(thisSong.id === 5){
       pressStart.innerHTML = "<h2>Press Enter To Play Song  <br/><br/> There are NO strikes! </h2>"
     }
     else {
       pressStart.innerHTML = "<h2>Press Enter To Play Song <br/><br/> You get a strike when you can't complete a lyric!</h2>"
-    }
-    pressStart.classList.remove('hidden')
+    }    pressStart.classList.remove('hidden')
     document.addEventListener('keydown', startGame)
   }
 
@@ -198,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function(){
       strikeBox.classList.remove('hidden')
       scoreBox.classList.remove('hidden')
       highScoreBox.classList.remove('hidden')
+
 
       video.classList.remove('hidden')
       video.addEventListener('ended', finishGame, { once: true })
@@ -281,9 +285,12 @@ document.addEventListener("DOMContentLoaded", function(){
           gameOver = true
           song.pause()
           video.pause()
-          strikesCount.innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
+          // strikesCount.innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
           chooseSongDiv.classList.remove('hidden')
           finalScore()
+          strikeBox.classList.add('hidden')
+          loseBox.classList.remove('hidden')
+
 
           // this counter is for the song select menu
           counter = -1
