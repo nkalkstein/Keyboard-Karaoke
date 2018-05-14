@@ -3,8 +3,8 @@ data = [
     id: 1,
     name: "roar",
     duration: 270.0,
-    username: "chase",
-    score: 720,
+    username: "arthur",
+    score: 729,
     lyrics: [
       { song_id: 1, start: 19.5, duration: 5.2, content: "I used to bite my tongue and hold my breath Scared to rock the boat and make a mess" },
       { song_id: 1, start: 24.7, duration: 5.3, content: "So I sat quietly agreed politely" },
