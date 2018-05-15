@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function(){
           gameOver = true
           song.pause()
           video.pause()
-          // strikesCount.innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
+          strikesCount.innerText = "Strike 10! YOU LOSE!  (You clearly don't know good music...)"
           chooseSongDiv.classList.remove('hidden')
           finalScore()
           strikeBox.classList.add('hidden')
