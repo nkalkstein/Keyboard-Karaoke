@@ -10,8 +10,8 @@ data = [
       { song_id: 1, start: 24.7, duration: 5.3, content: "So I sat quietly agreed politely" },
       { song_id: 1, start: 30.0, duration: 5.4, content: "I guess that I forgot I had a choice I let you push me past the breaking point" },
       { song_id: 1, start: 35.4, duration: 11.6, content: "I stood for nothing so I fell for everything" },
-      { song_id: 1, start: 47.0, duration: 5.0, content: "You held me down but I got up Already brushing off the dust" },
-      { song_id: 1, start: 52.0, duration: 5.8, content: "You hear my voice you hear that sound Like thunder gonna shake your ground" },
+      { song_id: 1, start: 47.0, duration: 5.2, content: "You held me down but I got up Already brushing off the dust" },
+      { song_id: 1, start: 52.0, duration: 5.6, content: "You hear my voice you hear that sound Like thunder gonna shake your ground" },
       { song_id: 1, start: 57.8, duration: 5.2, content: "You held me down but I got up Get ready cause Ive had enough" },
       { song_id: 1, start: 63.0, duration: 3.0, content: "I see it all I see it now" },
       { song_id: 1, start: 66.0, duration: 4.5, content: "I got the eye of the tiger a fighter" },
@@ -75,7 +75,7 @@ data = [
     name: "gangsters paradise",
     duration: 256.0,
     username: "patricia",
-    score: 201,
+    score: 205,
     lyrics:
     [
     { song_id: 3, start: 26.48, duration: 2.64, content: "As I walk through the valley of the shadow of death"},
