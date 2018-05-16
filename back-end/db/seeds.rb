@@ -176,8 +176,8 @@ data = [
     id: 5,
     name: "look at me now",
     duration: 63.00,
-    username: "arthur",
-    score: 428,
+    username: "Vicky",
+    score: 451,
     lyrics: [
       { song_id: 5, start: 32.02, duration: 3.0, content: "Cause Im feelin like Im runnin And Im feelin like I gotta get away get away get away" },
       { song_id: 5, start: 32.02, duration: 3.3, content: "Better know that I dont and I wont ever stop Cause you know I gotta win everydayday" },
