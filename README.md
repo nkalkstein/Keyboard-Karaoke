@@ -1,4 +1,4 @@
-# KeyboardKaraoke
+# Keyboard Karaoke
 
 A music-driven, timed typing game in which you type lyrics to a song while the music video plays.
 
