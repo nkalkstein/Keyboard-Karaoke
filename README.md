@@ -20,6 +20,8 @@ This game is very challenging and fun to play.  You can choose your level of dif
 
 # Screenshots
 ![](https://github.com/nkalkstein/Keyboard-Karaoke/blob/master/Screen%20Shot%202018-07-19%20at%2010.35.52%20PM.png)
+![](https://github.com/nkalkstein/Keyboard-Karaoke/blob/master/Screen%20Shot%202018-07-19%20at%2010.36.39%20PM.png)
+![]()
 
 # Demo Video
 
