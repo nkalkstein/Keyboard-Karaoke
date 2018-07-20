@@ -21,7 +21,7 @@ This game is very challenging and fun to play.  You can choose your level of dif
 # Screenshots
 ![](https://github.com/nkalkstein/Keyboard-Karaoke/blob/master/Screen%20Shot%202018-07-19%20at%2010.35.52%20PM.png)
 ![](https://github.com/nkalkstein/Keyboard-Karaoke/blob/master/Screen%20Shot%202018-07-19%20at%2010.36.39%20PM.png)
-![]()
+![](https://github.com/nkalkstein/Keyboard-Karaoke/blob/master/Screen%20Shot%202018-07-19%20at%2010.37.18%20PM.png)
 
 # Demo Video
 
@@ -32,3 +32,5 @@ This game is very challenging and fun to play.  You can choose your level of dif
 * [Ruby on Rails](https://rubyonrails.org/) - The web framework used
 * [React](https://reactjs.org/docs/getting-started.html) - Javascript library used to create user interface
 
+# Version
+ Version 1
